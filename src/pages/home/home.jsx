@@ -25,7 +25,7 @@ export const HomePage = () => {
               justify="space-between"
               alignItems="center"
             >
-              <Grid item md={4} sm={6} xs={12}>
+              <Grid item md={5} sm={6} xs={12}>
                 <Box>
                   <Typography className={classes.header} variant="h2">
                     We Code With High Quality
@@ -40,7 +40,7 @@ export const HomePage = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item md={8} sm={6} xs={12}>
+              <Grid item md={7} sm={6} xs={12}>
                 <Grid
                   container
                   direction="row"

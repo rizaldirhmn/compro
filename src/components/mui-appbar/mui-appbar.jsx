@@ -20,11 +20,13 @@ import {
 import logo from "../../assets/logo/logo-eoa-main.png";
 import { Box, Typography } from "@material-ui/core";
 import { NavbarButton } from "../navbar-button/navbar-button";
+import { useHistory } from "react-router-dom";
 
 export const MuiAppbar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState("panel1");
+  const history = useHistory();
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -42,13 +44,13 @@ export const MuiAppbar = () => {
             <img src={logo} className={classes.logo} />
           </Box>
           <Box className={classes.menuItems}>
-            <Box>
+            <Box onClick={() => history.push("/")}>
               <Typography className={classes.menuText}>Home</Typography>
             </Box>
-            <Box>
+            <Box onClick={() => history.push("/company")}>
               <Typography className={classes.menuText}>Company</Typography>
             </Box>
-            <Box>
+            <Box onClick={() => history.push("/project")}>
               <Typography className={classes.menuText}>Project</Typography>
             </Box>
             <Box>
@@ -58,7 +60,7 @@ export const MuiAppbar = () => {
           <IconButton
             className={classes.menuButton}
             color="primary"
-            onClick={() => toggleDrawer("top", true)}
+            onClick={() => toggleDrawer()}
             aria-label="menu"
           >
             {open ? <CloseIcon /> : <MenuIcon />}
@@ -78,13 +80,43 @@ export const MuiAppbar = () => {
           <div className={clsx(classes.list, classes.fullList)}>
             <List className={classes.listItem}>
               <ListItem button>
-                <ListItemText primary="Home" />
+                <Box
+                  width="100%"
+                  onClick={() => {
+                    toggleDrawer();
+                    history.push("/");
+                  }}
+                >
+                  <ListItemText primary="Home" className={classes.menuText} />
+                </Box>
               </ListItem>
               <ListItem button>
-                <ListItemText primary="Company" />
+                <Box
+                  width="100%"
+                  onClick={() => {
+                    toggleDrawer();
+                    history.push("/company");
+                  }}
+                >
+                  <ListItemText
+                    primary="Company"
+                    className={classes.menuText}
+                  />
+                </Box>
               </ListItem>
               <ListItem button>
-                <ListItemText primary="Project" />
+                <Box
+                  width="100%"
+                  onClick={() => {
+                    toggleDrawer();
+                    history.push("/project");
+                  }}
+                >
+                  <ListItemText
+                    primary="Project"
+                    className={classes.menuText}
+                  />
+                </Box>
               </ListItem>
               <Accordion
                 square
@@ -95,7 +127,7 @@ export const MuiAppbar = () => {
                   aria-controls="panel1d-content"
                   id="panel1d-header"
                 >
-                  <Typography>Language</Typography>
+                  <Typography className={classes.menuText}>Language</Typography>
                   <Box ml={1}>
                     {expanded === "panel1" ? (
                       <ExpandLessIcon />

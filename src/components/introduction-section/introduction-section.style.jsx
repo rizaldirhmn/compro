@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "60%",
     },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(6),
+    },
   },
   boxPosition: {
     [theme.breakpoints.down("sm")]: {

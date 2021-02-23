@@ -22,6 +22,13 @@ let theme = createMuiTheme({
       ),
     },
   },
+  overrides: {
+    MuiListItemText: {
+      primary: {
+        fontFamily: "Poppins",
+      },
+    },
+  },
 });
 
 theme = responsiveFontSizes(theme);

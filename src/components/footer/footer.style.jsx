@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   footerTextCopyright: {
     color: "#fff",
     fontFamily: "Montserrat",
-    fontSize: 10,
+    fontSize: 12,
   },
   footerCopyright: {
     zIndex: 66,

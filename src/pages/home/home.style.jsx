@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   body: {
     fontSize: "14px",
-    lineHeight: "40px",
+    lineHeight: "25px",
     color: "#fff",
     fontFamily: "Poppins",
     marginTop: "40px",

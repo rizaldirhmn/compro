@@ -5,11 +5,19 @@ import useStyles from "./description-text.style";
 export const DescriptionText = ({ text, textAlignLeft = false, ...props }) => {
   const classes = useStyles();
 
+  const { className } = props;
+
   return (
     <>
       <Typography
         {...props}
-        className={textAlignLeft ? classes.textAlignLeft : classes.text}
+        className={
+          className
+            ? className
+            : textAlignLeft
+            ? classes.textAlignLeft
+            : classes.text
+        }
         color="textSecondary"
         variant="body1"
       >
