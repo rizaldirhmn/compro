@@ -55,7 +55,8 @@ const useStyles = makeStyles((theme) => ({
   Appbar: {
     background: "#FFFFFF",
     boxShadow: "none",
-    zIndex: 100000000,
+    zIndex: 100000,
+    overflowY: "auto",
   },
   toolbarmixins: theme.mixins.toolbar,
   title: {
@@ -84,20 +85,53 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  menuButton: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+    },
+  },
+  menuItems: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "400px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  menuText: {
+    fontFamily: "Poppins",
+    fontSize: "16px",
+    fontWeight: 500,
+    cursor: "pointer",
+    "&:hover": {
+      color: theme.palette.primary.main,
+      transition: "0.3s all ease-out",
+    },
+  },
   logo: {
-    width: "5%",
+    position: "relative",
+    width: "20%",
     height: "auto",
-    paddingLeft: "12px",
     [theme.breakpoints.down("sm")]: {
       width: "18%",
       height: "auto",
     },
   },
   toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "0 6rem",
     [theme.breakpoints.down("sm")]: {
+      width: "85%",
+      margin: "0 auto",
+      padding: "0.5rem 0",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
+    },
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "85%",
     },
   },
 }));

@@ -38,7 +38,23 @@ export const MuiAppbar = () => {
     <>
       <AppBar position="sticky" className={classes.Appbar}>
         <Toolbar className={classes.toolbar}>
-          <img src={logo} className={classes.logo} />
+          <Box>
+            <img src={logo} className={classes.logo} />
+          </Box>
+          <Box className={classes.menuItems}>
+            <Box>
+              <Typography className={classes.menuText}>Home</Typography>
+            </Box>
+            <Box>
+              <Typography className={classes.menuText}>Company</Typography>
+            </Box>
+            <Box>
+              <Typography className={classes.menuText}>Project</Typography>
+            </Box>
+            <Box>
+              <Typography className={classes.menuText}>Languange</Typography>
+            </Box>
+          </Box>
           <IconButton
             className={classes.menuButton}
             color="primary"
