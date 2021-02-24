@@ -6,7 +6,7 @@ import { SubtitleText } from "../../components/mui-typography/subtitle-text/subt
 import useStyles from "./job-section.style";
 import data from "../../data/job";
 
-export const JobSection = () => {
+export const JobSection = ({ t }) => {
   const classes = useStyles();
 
   return (
@@ -20,14 +20,20 @@ export const JobSection = () => {
             alignItems="flex-end"
           >
             <Grid item md={7} sm={12}>
-              <SubtitleText className={classes.subtitle} text="Position" />
-              <HeaderText className={classes.header} text="Careers" />
+              <SubtitleText
+                className={classes.subtitle}
+                text={`${t("CareerText.1")}`}
+              />
+              <HeaderText
+                className={classes.header}
+                text={`${t("CareerHeader.1")}`}
+              />
             </Grid>
             <Grid item md={5} sm={12}>
               <Box>
                 <DescriptionText
                   className={classes.description}
-                  text="We keep looking for all levels of software developers from junior to senior developers in all range of skills"
+                  text={`${t("CareerDescription.1")}`}
                 />
               </Box>
             </Grid>

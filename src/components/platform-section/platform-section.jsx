@@ -9,7 +9,7 @@ import androidAlt from "@iconify-icons/cib/android-alt";
 import appleFilled from "@iconify-icons/ant-design/apple-filled";
 import { Icon } from "@iconify/react";
 
-export const PlatformSection = () => {
+export const PlatformSection = ({ t }) => {
   const classes = useStyles();
 
   return (
@@ -18,15 +18,15 @@ export const PlatformSection = () => {
         <Box className={classes.flex}>
           <Box flex={1}>
             <Box marginTop={10}>
-              <SubtitleText text="Develop" />
+              <SubtitleText text={`${t("PlatformText.1")}`} />
             </Box>
             <Box marginTop={3}>
-              <HeaderText text="Platforms" />
+              <HeaderText text={`${t("PlatformHeader.1")}`} />
             </Box>
           </Box>
           <Box flex={1}>
             <Box marginTop={3}>
-              <DescriptionText text="We know what platforms our clients need, with the most advanced and reliable technology. So clients can trust us entirely according to the spesifications that have been given" />
+              <DescriptionText text={`${t("PlatformDescription.1")}`} />
             </Box>
           </Box>
         </Box>

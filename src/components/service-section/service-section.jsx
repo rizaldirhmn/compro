@@ -8,7 +8,7 @@ import { SubtitleText } from "../mui-typography/subtitle-text/subtitle-text";
 import useStyles from "./service-section.style";
 import { Box, Typography } from "@material-ui/core";
 
-export const ServiceSection = () => {
+export const ServiceSection = ({ t }) => {
   const classes = useStyles();
 
   return (
@@ -17,15 +17,15 @@ export const ServiceSection = () => {
         <Box className={classes.consBox}>
           <Box flex={1}>
             <Box marginTop={10}>
-              <SubtitleText text="Service" />
+              <SubtitleText text={`${t("ServiceText.1")}`} />
             </Box>
             <Box marginTop={3}>
-              <HeaderText text="Our Services" />
+              <HeaderText text={`${t("ServiceHeader.1")}`} />
             </Box>
           </Box>
           <Box flex={1}>
             <Box marginTop={3}>
-              <DescriptionText text="We are very aware and meticulous in producing high-quality software for our clients, flexible team with high experiences developers and produce software with minimal invesments" />
+              <DescriptionText text={`${t("ServiceDescription.1")}`} />
             </Box>
           </Box>
         </Box>
@@ -45,13 +45,13 @@ export const ServiceSection = () => {
             </Box>
             <Box marginTop={2}>
               <Typography variant="h5" className={classes.text}>
-                Web Development
+                {t("ServiceContent.ServiceContentHeader.1")}
               </Typography>
             </Box>
             <Box marginTop={2} className={classes.descriptionText}>
               <DescriptionText
                 textAlignLeft={true}
-                text="We Developing a simple single static page of plain text to complex Web Site - based Internet applications, businesses, and social network Services"
+                text={`${t("ServiceContent.ServiceContentDescription.1")}`}
               />
             </Box>
           </Box>
@@ -65,13 +65,13 @@ export const ServiceSection = () => {
             </Box>
             <Box marginTop={2}>
               <Typography variant="h5" className={classes.text}>
-                Mobile App
+                {t("ServiceContent.ServiceContentHeader.2")}
               </Typography>
             </Box>
             <Box marginTop={2} className={classes.descriptionText}>
               <DescriptionText
                 textAlignLeft={true}
-                text="We Developing a Mobile app for mobile device, such as personal digital assistants, enterprise digital assistants or mobile phones"
+                text={`${t("ServiceContent.ServiceContentDescription.2")}`}
               />
             </Box>
           </Box>
@@ -85,13 +85,13 @@ export const ServiceSection = () => {
             </Box>
             <Box marginTop={2}>
               <Typography variant="h5" className={classes.text}>
-                ERP
+                {t("ServiceContent.ServiceContentHeader.3")}
               </Typography>
             </Box>
             <Box marginTop={2} className={classes.descriptionText}>
               <DescriptionText
                 textAlignLeft={true}
-                text="We Developing a ERP solution based on your business requirements and to help you grow your business exponentially"
+                text={`${t("ServiceContent.ServiceContentDescription.3")}`}
               />
             </Box>
           </Box>

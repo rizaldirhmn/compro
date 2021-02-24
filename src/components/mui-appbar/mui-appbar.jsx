@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-import clsx from "clsx";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import React, { useEffect, useState } from "react";
 import ListItemText from "@material-ui/core/ListItemText";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
@@ -11,30 +7,40 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
-import {
-  useStyles,
-  AccordionDetails,
-  AccordionSummary,
-  Accordion,
-} from "./mui-appbar.style";
+import { useStyles, StyledMenu, StyledMenuItem } from "./mui-appbar.style";
+import { Icon } from "@iconify/react";
 import logo from "../../assets/logo/logo-eoa-main.png";
-import { Box, Typography } from "@material-ui/core";
-import { NavbarButton } from "../navbar-button/navbar-button";
+import { Box, Fade, ListItemIcon, Typography } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
+import uiEarthEast from "@iconify-icons/geo/ui-earth-east";
+import uiEarthWest from "@iconify-icons/geo/ui-earth-west";
+import i18next from "i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 export const MuiAppbar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [expanded, setExpanded] = useState("panel1");
   const history = useHistory();
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [language, setLanguage] = useState("en");
+  const { t } = useTranslation();
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  function handleChangeLanguage(lang) {
+    i18next.changeLanguage(lang);
+  }
 
   return (
     <>
@@ -45,16 +51,33 @@ export const MuiAppbar = () => {
           </Box>
           <Box className={classes.menuItems}>
             <Box onClick={() => history.push("/")}>
-              <Typography className={classes.menuText}>Home</Typography>
+              <Typography className={classes.menuText}>
+                <Trans count={1}>{t("NavbarItems.1")}</Trans>
+              </Typography>
             </Box>
             <Box onClick={() => history.push("/company")}>
-              <Typography className={classes.menuText}>Company</Typography>
+              <Typography className={classes.menuText}>
+                <Trans count={1}>{t("NavbarItems.2")}</Trans>
+              </Typography>
             </Box>
             <Box onClick={() => history.push("/project")}>
-              <Typography className={classes.menuText}>Project</Typography>
+              <Typography className={classes.menuText}>
+                <Trans count={1}>{t("NavbarItems.3")}</Trans>
+              </Typography>
             </Box>
-            <Box>
-              <Typography className={classes.menuText}>Languange</Typography>
+            <Box
+              display="flex"
+              onClick={handleClick}
+              className={classes.menuText}
+            >
+              <Box>
+                <Typography className={classes.menuText}>
+                  <Trans count={1}>{t("NavbarItems.4")}</Trans>
+                </Typography>
+              </Box>
+              <Box marginLeft={1}>
+                {Boolean(anchorEl) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              </Box>
             </Box>
           </Box>
           <IconButton
@@ -67,99 +90,63 @@ export const MuiAppbar = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div>
-        <Drawer
-          anchor="top"
-          open={open}
-          onClose={toggleDrawer}
-          className={classes.drawerPosition}
-          classes={{ paper: classes.paper }}
-          BackdropProps={{ invisible: true }}
+      <MuiDrawerComponent
+        open={open}
+        toggleDrawer={toggleDrawer}
+        handleChangeLanguage={handleChangeLanguage}
+        setLanguage={setLanguage}
+        language={language}
+        t={t}
+      />
+      <StyledMenu
+        id="customized-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        TransitionComponent={Fade}
+      >
+        <StyledMenuItem
+          onClick={() => {
+            handleChangeLanguage("en");
+            setLanguage("en");
+          }}
         >
-          <div className={classes.toolbarmixins} />
-          <div className={clsx(classes.list, classes.fullList)}>
-            <List className={classes.listItem}>
-              <ListItem button>
-                <Box
-                  width="100%"
-                  onClick={() => {
-                    toggleDrawer();
-                    history.push("/");
-                  }}
-                >
-                  <ListItemText primary="Home" className={classes.menuText} />
-                </Box>
-              </ListItem>
-              <ListItem button>
-                <Box
-                  width="100%"
-                  onClick={() => {
-                    toggleDrawer();
-                    history.push("/company");
-                  }}
-                >
-                  <ListItemText
-                    primary="Company"
-                    className={classes.menuText}
-                  />
-                </Box>
-              </ListItem>
-              <ListItem button>
-                <Box
-                  width="100%"
-                  onClick={() => {
-                    toggleDrawer();
-                    history.push("/project");
-                  }}
-                >
-                  <ListItemText
-                    primary="Project"
-                    className={classes.menuText}
-                  />
-                </Box>
-              </ListItem>
-              <Accordion
-                square
-                expanded={expanded === "panel1"}
-                onChange={handleChange("panel1")}
-              >
-                <AccordionSummary
-                  aria-controls="panel1d-content"
-                  id="panel1d-header"
-                >
-                  <Typography className={classes.menuText}>Language</Typography>
-                  <Box ml={1}>
-                    {expanded === "panel1" ? (
-                      <ExpandLessIcon />
-                    ) : (
-                      <ExpandMoreIcon />
-                    )}
-                  </Box>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Box
-                    margin="0 auto"
-                    display="flex"
-                    width="100%"
-                    justifyContent="space-between"
-                  >
-                    <NavbarButton
-                      text="English"
-                      color="primary"
-                      variant="contained"
-                    />
-                    <NavbarButton
-                      text="Indonesia"
-                      color="primary"
-                      variant="outlined"
-                    />
-                  </Box>
-                </AccordionDetails>
-              </Accordion>
-            </List>
-          </div>
-        </Drawer>
-      </div>
+          <ListItemIcon>
+            <Icon
+              color={language === "en" ? "#16A1E0" : "#C4C4C4"}
+              icon={uiEarthWest}
+              className={classes.icon}
+              width="1.5em"
+              height="1.5em"
+            />
+          </ListItemIcon>
+          <ListItemText
+            primary={`${t("Languages.1")}`}
+            className={language === "en" ? classes.active : ""}
+          />
+        </StyledMenuItem>
+        <StyledMenuItem
+          onClick={() => {
+            handleChangeLanguage("id");
+            setLanguage("id");
+          }}
+        >
+          <ListItemIcon>
+            <Icon
+              color={language === "id" ? "#16A1E0" : "#C4C4C4"}
+              icon={uiEarthEast}
+              className={classes.icon}
+              width="1.5em"
+              height="1.5em"
+            />
+          </ListItemIcon>
+          <ListItemText
+            primary={`${t("Languages.2")}`}
+            className={language === "id" ? classes.active : ""}
+          />
+        </StyledMenuItem>
+      </StyledMenu>
     </>
   );
 };

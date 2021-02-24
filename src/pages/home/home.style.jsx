@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
   },
   marketingIllustration: {
     position: "relative",
-    animation: "$myEffect 3s linear 3s infinite",
+    animation: "$myEffect 3s linear 4s infinite",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       height: "auto",
@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
   },
   jumbotronIllustration: {
     position: "relative",
-    animation: "$myEffect 3s linear 3s infinite",
+    animation: "$myEffect 3s linear 4s infinite",
     [theme.breakpoints.down("sm")]: {
       marginTop: "4rem",
       width: "100%",

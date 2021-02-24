@@ -17,9 +17,50 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(2),
     },
   },
+  title: {
+    fontWeight: "bold",
+    fontFamily: "Montserrat",
+  },
+  bottomSectionText: {
+    fontWeight: 500,
+    fontFamily: "Montserrat",
+  },
   sendText: {
     fontWeight: "bold",
     fontFamily: "Montserrat",
+  },
+  background: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#F4F4F4",
+    height: "100%",
+    marginTop: theme.spacing(10),
+  },
+  sectionSpaceVission: {
+    marginTop: theme.spacing(4),
+    textAlign: "justify",
+    marginRight: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      marginRight: theme.spacing(0),
+      paddingLeft: theme.spacing(1),
+    },
+  },
+  sectionSpaceMission: {
+    marginTop: theme.spacing(4),
+    textAlign: "justify",
+    marginLeft: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: theme.spacing(0),
+      paddingLeft: theme.spacing(1),
+    },
+  },
+  missionText: {
+    marginLeft: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(5),
+      marginLeft: theme.spacing(0),
+    },
   },
 }));
 

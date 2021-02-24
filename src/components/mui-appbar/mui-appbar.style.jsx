@@ -1,52 +1,32 @@
 import { makeStyles } from "@material-ui/styles";
 import { withStyles } from "@material-ui/core/styles";
-import MuiAccordion from "@material-ui/core/Accordion";
-import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
-import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
+import { Menu, MenuItem } from "@material-ui/core";
 
-const Accordion = withStyles({
-  root: {
-    border: "none",
-    boxShadow: "none",
-    "&:not(:last-child)": {
-      borderBottom: 0,
-    },
-    "&:before": {
-      display: "none",
-    },
-    "&$expanded": {
-      margin: "auto",
-    },
-  },
-  expanded: {},
-})(MuiAccordion);
+const StyledMenu = withStyles({})((props) => (
+  <Menu
+    elevation={0}
+    disableScrollLock={true}
+    getContentAnchorEl={null}
+    style={{ zIndex: 1251 }}
+    anchorOrigin={{
+      vertical: "bottom",
+      horizontal: "center",
+    }}
+    transformOrigin={{
+      vertical: "top",
+      horizontal: "center",
+    }}
+    {...props}
+  />
+));
 
-const AccordionDetails = withStyles((theme) => ({
+const StyledMenuItem = withStyles((theme) => ({
   root: {
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-  },
-}))(MuiAccordionDetails);
-
-const AccordionSummary = withStyles({
-  root: {
-    backgroundColor: "transparent",
-    borderBottom: "none",
-    marginBottom: -1,
-    minHeight: 56,
-    "&$expanded": {
-      minHeight: 56,
+    "&:hover": {
+      backgroundColor: "transparent",
     },
   },
-  content: {
-    "&$expanded": {
-      margin: "12px 0",
-    },
-  },
-  expanded: {},
-})(MuiAccordionSummary);
+}))(MenuItem);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,31 +35,16 @@ const useStyles = makeStyles((theme) => ({
   Appbar: {
     background: "#FFFFFF",
     boxShadow: "none",
-    zIndex: 100000,
     overflowY: "auto",
   },
-  toolbarmixins: theme.mixins.toolbar,
   title: {
     flexGrow: 1,
   },
-  list: {
-    width: "auto",
-  },
-  fullList: {
-    width: "auto",
-  },
-  paper: {
-    backgroundColor: "none",
-    boxShadow: "none",
-  },
-  drawerPosition: {
-    position: "relative",
-    top: "20%",
-    marginTop: "50px",
-    backgroundColor: "none",
-  },
-  listItem: {
-    padding: "10px",
+  active: {
+    color: theme.palette.primary.main,
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -94,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   menuItems: {
     display: "flex",
     justifyContent: "space-between",
-    width: "400px",
+    width: "450px",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -104,9 +69,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     fontWeight: 500,
     cursor: "pointer",
+    transition: "0.3s all ease-out",
     "&:hover": {
       color: theme.palette.primary.main,
-      transition: "0.3s all ease-out",
     },
   },
   logo: {
@@ -136,4 +101,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export { useStyles, Accordion, AccordionSummary, AccordionDetails };
+export { useStyles, StyledMenu, StyledMenuItem };

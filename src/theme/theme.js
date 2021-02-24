@@ -4,6 +4,11 @@ import {
 } from "@material-ui/core";
 
 let theme = createMuiTheme({
+  zIndex: {
+    appBar: 1251,
+    modal: 1250,
+    paper: 1252,
+  },
   palette: {
     primary: {
       main: "#16A1E0",

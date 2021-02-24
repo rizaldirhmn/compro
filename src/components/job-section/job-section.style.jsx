@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     marginTop: theme.spacing(2),
   },
+  description: {
+    fontFamily: "Montserrat",
+    [theme.breakpoints.down("sm")]: {
+      fontWeight: 600,
+      marginTop: theme.spacing(2),
+    },
+  },
   jobContainer: {
     display: "flex",
     flexDirection: "column",

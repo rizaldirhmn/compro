@@ -9,15 +9,18 @@ import linkedinFill from "@iconify-icons/akar-icons/linkedin-fill";
 import mapMarkerLine from "@iconify-icons/clarity/map-marker-line";
 import phoneIcon from "@iconify-icons/akar-icons/phone";
 import { Icon } from "@iconify/react";
+import { useTranslation, Trans } from "react-i18next";
 
 export const FooterComponent = () => {
   const classes = useStyles();
+
+  const { t } = useTranslation();
+
   return (
     <>
       <Box className={classes.footerPaper}>
         <Box className={classes.overlay}></Box>
         <Box className={classes.container}>
-          {/* <Box p={1} paddingTop={5}></Box> */}
           <Box p={1} paddingTop={5} className={classes.footerSpace}>
             <Box className={classes.footerItems}>
               <img
@@ -27,8 +30,7 @@ export const FooterComponent = () => {
               />
               <Box marginTop={4}>
                 <Typography className={classes.footerText}>
-                  The software house company, a software development company
-                  company that specializes in software development apps
+                  <Trans count={1}>{t("FooterDescriptionText.1")}</Trans>
                 </Typography>
               </Box>
               <Box
@@ -54,7 +56,7 @@ export const FooterComponent = () => {
             <Box className={classes.footerItems}>
               <Box>
                 <Typography className={classes.footerTextHeader}>
-                  Address
+                  <Trans count={1}>{t("AddressText.1")}</Trans>
                 </Typography>
               </Box>
               <Box display="flex" marginTop={4}>
@@ -76,7 +78,7 @@ export const FooterComponent = () => {
             <Box className={classes.footerItems}>
               <Box>
                 <Typography className={classes.footerTextHeader}>
-                  Contact
+                  <Trans count={1}>{t("ContactText.1")}</Trans>
                 </Typography>
               </Box>
               <Box display="flex" marginTop={4}>

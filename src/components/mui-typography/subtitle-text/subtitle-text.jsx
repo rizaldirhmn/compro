@@ -1,8 +1,9 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./subtitle-text.style";
+import { Trans } from "react-i18next";
 
-export const SubtitleText = ({ text, ...props }) => {
+export const SubtitleText = ({ text, i18nKey, count = 1, ...props }) => {
   const classes = useStyles();
   return (
     <>
@@ -12,7 +13,9 @@ export const SubtitleText = ({ text, ...props }) => {
         color="textSecondary"
         className={classes.text}
       >
-        {text}
+        <Trans i18nKey={i18nKey} count={count}>
+          {text}
+        </Trans>
       </Typography>
     </>
   );

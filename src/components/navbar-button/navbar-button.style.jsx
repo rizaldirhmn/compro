@@ -6,9 +6,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     padding: "10px 35px",
     borderRadius: "20px",
-    boxSahdow: "none",
+    boxShadow: "none",
+    background: theme.palette.primary.main,
     "&:hover": {
       background: "#0e99da",
+    },
+    fontFamily: "Poppins",
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 5px",
     },
   },
   outlinedButton: {
@@ -20,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
     border: `1px solid ${theme.palette.primary.main}`,
     "&:hover": {
       background: "#e2f2fa",
+    },
+    fontFamily: "Poppins",
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 5px",
     },
   },
 }));

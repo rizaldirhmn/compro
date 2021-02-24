@@ -5,7 +5,7 @@ import { DescriptionText } from "../mui-typography/description-text/description-
 import { HeaderText } from "../mui-typography/header-text/header-text";
 import { SubtitleText } from "../mui-typography/subtitle-text/subtitle-text";
 
-export const TeamSection = () => {
+export const TeamSection = ({ t }) => {
   const classes = useStyles();
 
   return (
@@ -19,14 +19,20 @@ export const TeamSection = () => {
             alignItems="flex-end"
           >
             <Grid item md={7} sm={12}>
-              <SubtitleText className={classes.subtitle} text="EOA Team" />
-              <HeaderText className={classes.header} text="Our Teams" />
+              <SubtitleText
+                className={classes.subtitle}
+                text={`${t("TeamText.1")}`}
+              />
+              <HeaderText
+                className={classes.header}
+                text={`${t("TeamHeader.1")}`}
+              />
             </Grid>
             <Grid item md={5} sm={12}>
               <Box>
                 <DescriptionText
                   className={classes.description}
-                  text="How and what kind of sotware house company was formed, Mission Vission, a brief history and anyone behind the software house company"
+                  text={`${t("TeamDescription.1")}`}
                 />
               </Box>
             </Grid>

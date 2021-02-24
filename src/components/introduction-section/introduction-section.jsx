@@ -10,7 +10,7 @@ import { HeaderText } from "../mui-typography/header-text/header-text";
 import { SubtitleText } from "../mui-typography/subtitle-text/subtitle-text";
 import useStyles from "./introduction-section.style";
 
-export const IntroductionSection = () => {
+export const IntroductionSection = ({ t }) => {
   const classes = useStyles();
 
   return (
@@ -19,13 +19,13 @@ export const IntroductionSection = () => {
         <Box className={classes.introductions}>
           <Box flex={1.5}>
             <Box marginTop={6}>
-              <SubtitleText text="Introduction" />
+              <SubtitleText text={`${t("IntroductionText.1")}`} />
             </Box>
             <Box marginTop={3}>
-              <HeaderText text="How We Work" />
+              <HeaderText text={`${t("IntroductionHeader.1")}`} />
             </Box>
             <Box className={classes.descriptionText}>
-              <DescriptionText text="We always provide the best services and solutions to our clents requirements. We give you good quality software development through a better understanding of your bussiness and future" />
+              <DescriptionText text={`${t("IntroductionDescription.1")}`} />
             </Box>
           </Box>
           <Box flex={1}>
@@ -38,7 +38,7 @@ export const IntroductionSection = () => {
                     </Box>
                     <Box marginTop={2}>
                       <Typography variant="h5" className={classes.text}>
-                        Discover Project Goal
+                        {t("IntroductionContent.1")}
                       </Typography>
                     </Box>
                   </Box>
@@ -52,7 +52,7 @@ export const IntroductionSection = () => {
                     </Box>
                     <Box marginTop={2}>
                       <Typography variant="h5" className={classes.text}>
-                        Get a Proposal from Us
+                        {t("IntroductionContent.2")}
                       </Typography>
                     </Box>
                   </Box>
@@ -66,7 +66,7 @@ export const IntroductionSection = () => {
                     </Box>
                     <Box marginTop={2}>
                       <Typography variant="h5" className={classes.text}>
-                        Taken the Contract
+                        {t("IntroductionContent.3")}
                       </Typography>
                     </Box>
                   </Box>
@@ -80,7 +80,7 @@ export const IntroductionSection = () => {
                     </Box>
                     <Box marginTop={2}>
                       <Typography variant="h5" className={classes.text}>
-                        Project Implementation
+                        {t("IntroductionContent.4")}
                       </Typography>
                     </Box>
                   </Box>

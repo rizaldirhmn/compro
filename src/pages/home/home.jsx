@@ -9,9 +9,12 @@ import useStyles from "./home.style";
 import { PlatformSection } from "../../components/platform-section/platform-section";
 import { SubtitleText } from "../../components/mui-typography/subtitle-text/subtitle-text";
 import { HeaderText } from "../../components/mui-typography/header-text/header-text";
+import { useTranslation } from "react-i18next";
 
-export const HomePage = () => {
+export const HomePage = React.memo(() => {
   const classes = useStyles();
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -28,15 +31,12 @@ export const HomePage = () => {
               <Grid item md={5} sm={6} xs={12}>
                 <Box>
                   <Typography className={classes.header} variant="h2">
-                    We Code With High Quality
+                    {t("HeaderJumbotron.1")}
                   </Typography>
                 </Box>
                 <Box>
                   <Typography className={classes.body}>
-                    EOA Tech is a software development company that specializes
-                    in software development or apps. EOA Tech has been a lot
-                    involved helping clients solve their problems. As it grows,
-                    it wants to be know more and it brings in new clients
+                    {t("JumbotronDescription.1")}
                   </Typography>
                 </Box>
               </Grid>
@@ -58,16 +58,15 @@ export const HomePage = () => {
           </Box>
         </Box>
       </Box>
-      <IntroductionSection />
-      <ServiceSection />
+      <IntroductionSection t={t} />
+      <ServiceSection t={t} />
       <Box className={classes.container}>
         <Box marginTop={10}>
           <Paper className={classes.paper}>
             <Box className={classes.flex}>
               <Box className={classes.sloganContainer}>
                 <Typography variant="h4" className={classes.sloganText}>
-                  We share our ideas, knowledge and experiences. So let’s see
-                  how you can improve your business with EOA Tech now
+                  {t("SloganText.1")}
                 </Typography>
               </Box>
               <Box p={1}>
@@ -81,7 +80,7 @@ export const HomePage = () => {
           </Paper>
         </Box>
       </Box>
-      <PlatformSection />
+      <PlatformSection t={t} />
       <Box className={classes.container}>
         <Box
           display="flex"
@@ -90,10 +89,10 @@ export const HomePage = () => {
           justifyContent="center"
         >
           <Box marginTop={10} textAlign="center">
-            <SubtitleText text="Client" />
+            <SubtitleText text={`${t("ClientText.1")}`} />
           </Box>
           <Box marginTop={3}>
-            <HeaderText text="Our Clients" />
+            <HeaderText text={`${t("ClientHeader.1")}`} />
           </Box>
         </Box>
       </Box>
@@ -106,13 +105,13 @@ export const HomePage = () => {
           marginBottom={10}
         >
           <Box marginTop={10}>
-            <SubtitleText text="Development" />
+            <SubtitleText text={`${t("DevelopmentText.1")}`} />
           </Box>
           <Box marginTop={3} textAlign="center">
-            <HeaderText text="Language & Framework" />
+            <HeaderText text={`${t("DevelopmentHeader.1")}`} />
           </Box>
         </Box>
       </Box>
     </>
   );
-};
+});
