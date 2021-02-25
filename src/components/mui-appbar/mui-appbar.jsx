@@ -38,9 +38,9 @@ export const MuiAppbar = () => {
     setOpen(!open);
   };
 
-  function handleChangeLanguage(lang) {
+  const handleChangeLanguage = (lang) => {
     i18next.changeLanguage(lang);
-  }
+  };
 
   return (
     <>

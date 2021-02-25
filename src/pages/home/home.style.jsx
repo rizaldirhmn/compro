@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(22, 161, 224, 0.7)",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      height: "850px",
+      height: "900px",
     },
   },
   header: {
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     [theme.breakpoints.down("sm")]: {
       marginTop: "60px",
+      lineHeight: "50px",
     },
   },
   "@keyframes myEffect": {
@@ -29,8 +30,7 @@ const useStyles = makeStyles((theme) => ({
     "100%": { bottom: "15px", top: "15px" },
   },
   body: {
-    fontSize: "14px",
-    lineHeight: "25px",
+    lineHeight: "30px",
     color: "#fff",
     fontFamily: "Poppins",
     marginTop: "40px",
@@ -83,6 +83,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      alignItems: "flex-start",
+    },
   },
   paper: {
     boxShadow: "none",
@@ -95,7 +99,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     fontWeight: 600,
     color: "#fff",
+    fontSize: "34px",
     lineHeight: "50px",
+    [theme.breakpoints.down("xs")]: {
+      lineHeight: "40px",
+      fontSize: "18px",
+    },
   },
   marketingIllustration: {
     position: "relative",
@@ -139,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "cover",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      height: "850px",
+      height: "900px",
       objectFit: "cover",
     },
   },

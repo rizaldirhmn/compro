@@ -17,7 +17,7 @@ const options = {
   order: ["navigator", "htmlTag", "path", "subdomain"],
   lookupQuerystring: "lng",
   lookupCookie: "i18next",
-  lookupLocalStorage: "i18nextLng",
+  lookupLocalStorage: "language",
   lookupFromPathIndex: 0,
   lookupFromSubdomainIndex: 0,
   caches: ["localStorage", "cookie"],

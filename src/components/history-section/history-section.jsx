@@ -22,7 +22,7 @@ export const HistorySection = ({ t }) => {
               direction={matches ? "column-reverse" : "row"}
               justify="space-between"
             >
-              <Grid item lg={6} md={12}>
+              <Grid item lg={6} md={12} sm={12}>
                 <Box className={classes.historyContent}>
                   <Typography className={classes.historyTitle}>
                     <Trans count={1}>{t("OverviewHeader.1")}</Trans>
@@ -32,7 +32,7 @@ export const HistorySection = ({ t }) => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item lg={6} md={12}>
+              <Grid item lg={6} md={12} sm={12}>
                 <Grid container direction="row" justify="flex-end">
                   <img
                     src={historyImage1}

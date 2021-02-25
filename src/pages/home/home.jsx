@@ -7,9 +7,9 @@ import { ServiceSection } from "../../components/service-section/service-section
 import marketingIllustration from "../../assets/illustrations/Marketing-Illustration.png";
 import useStyles from "./home.style";
 import { PlatformSection } from "../../components/platform-section/platform-section";
-import { SubtitleText } from "../../components/mui-typography/subtitle-text/subtitle-text";
-import { HeaderText } from "../../components/mui-typography/header-text/header-text";
 import { useTranslation } from "react-i18next";
+import { ClientSection } from "../../components/client-section/client-section";
+import { TechnologySection } from "../../components/technology-section/technology-section";
 
 export const HomePage = React.memo(() => {
   const classes = useStyles();
@@ -81,37 +81,8 @@ export const HomePage = React.memo(() => {
         </Box>
       </Box>
       <PlatformSection t={t} />
-      <Box className={classes.container}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Box marginTop={10} textAlign="center">
-            <SubtitleText text={`${t("ClientText.1")}`} />
-          </Box>
-          <Box marginTop={3}>
-            <HeaderText text={`${t("ClientHeader.1")}`} />
-          </Box>
-        </Box>
-      </Box>
-      <Box className={classes.container}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          marginBottom={10}
-        >
-          <Box marginTop={10}>
-            <SubtitleText text={`${t("DevelopmentText.1")}`} />
-          </Box>
-          <Box marginTop={3} textAlign="center">
-            <HeaderText text={`${t("DevelopmentHeader.1")}`} />
-          </Box>
-        </Box>
-      </Box>
+      <ClientSection t={t} />
+      <TechnologySection t={t} />
     </>
   );
 });
