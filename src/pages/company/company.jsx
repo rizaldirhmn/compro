@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@material-ui/core";
-import React from "react";
+import React, { useEffect } from "react";
 import { ActivitySection } from "../../components/activity-section/activity-section";
 import { HistorySection } from "../../components/history-section/history-section";
 import { DescriptionText } from "../../components/mui-typography/description-text/description-text";
@@ -14,6 +14,10 @@ export const CompanyPage = React.memo(() => {
   const classes = useStyles();
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

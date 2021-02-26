@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "../../assets/home/bg-1.png";
 import illustration1 from "../../assets/illustrations/Jumbroton-Illustration.png";
 import { IntroductionSection } from "../../components/introduction-section/introduction-section";
@@ -24,6 +24,10 @@ export const HomePage = React.memo(() => {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
