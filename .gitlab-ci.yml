@@ -1,0 +1,52 @@
+stages:
+  - build
+  - deploy
+
+default:
+  image: docker:19.03.12
+  before_script:
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+  services:
+    - docker:19.03.12-dind
+
+build-docker-dev:
+  stage: build
+  only:
+    - dev
+  script:
+    - docker build -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} .
+    - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+
+deploy-docker-dev:
+  stage: deploy
+  only:
+    - dev
+  script:
+    - eval $(ssh-agent -s)
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
+    - mkdir ~/.ssh && chmod 700 ~/.ssh
+    - echo -e "Host *\nStrictHostKeyChecking=no\nUserKnownHostsFile=/dev/null" > ~/.ssh/config
+    - apk add --no-cache gettext
+    - envsubst < stack.dev.yml > deploy.yml
+    - DOCKER_HOST=${SERVER_URL_DEV} docker stack deploy --with-registry-auth -c deploy.yml ${SERVICE_NAME}-dev
+
+build-docker-prd:
+  stage: build
+  only:
+    - master
+  script:
+    - docker build -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} .
+    - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+
+deploy-docker-prd:
+  stage: deploy
+  only:
+    - master
+  script:
+    - eval $(ssh-agent -s)
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
+    - mkdir ~/.ssh && chmod 700 ~/.ssh
+    - echo -e "Host *\nStrictHostKeyChecking=no\nUserKnownHostsFile=/dev/null" > ~/.ssh/config
+    - apk add --no-cache gettext
+    - envsubst < stack.prd.yml > deploy.yml
+    - DOCKER_HOST=${SERVER_URL_PRD} docker stack deploy --with-registry-auth -c deploy.yml ${SERVICE_NAME}-prd
