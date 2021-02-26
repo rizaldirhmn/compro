@@ -1,4 +1,11 @@
-import { Box, Grid, Paper, Typography } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Paper,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import React from "react";
 import bg from "../../assets/home/bg-1.png";
 import illustration1 from "../../assets/illustrations/Jumbroton-Illustration.png";
@@ -13,6 +20,8 @@ import { TechnologySection } from "../../components/technology-section/technolog
 
 export const HomePage = React.memo(() => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   const { t } = useTranslation();
 
@@ -28,7 +37,7 @@ export const HomePage = React.memo(() => {
               justify="space-between"
               alignItems="center"
             >
-              <Grid item md={5} sm={6} xs={12}>
+              <Grid item md={5} sm={12} xs={12}>
                 <Box>
                   <Typography className={classes.header} variant="h2">
                     {t("HeaderJumbotron.1")}
@@ -40,12 +49,12 @@ export const HomePage = React.memo(() => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item md={7} sm={6} xs={12}>
+              <Grid item md={7} sm={12} xs={12}>
                 <Grid
                   container
                   direction="row"
-                  justify="flex-end"
-                  alignItems="flex-end"
+                  justify={matches ? "center" : "flex-end"}
+                  alignItems={matches ? "center" : "flex-end"}
                 >
                   <img
                     src={illustration1}

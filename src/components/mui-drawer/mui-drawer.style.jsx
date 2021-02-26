@@ -89,6 +89,14 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
     },
   },
+  menuTextActive: {
+    fontFamily: "Poppins",
+    fontSize: "16px",
+    fontWeight: 600,
+    cursor: "pointer",
+    transition: "0.3s all ease-out",
+    color: theme.palette.primary.main,
+  },
   accordionSpace: {
     display: "flex",
     width: "100%",

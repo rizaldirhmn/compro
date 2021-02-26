@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   bottomSectionText: {
     fontWeight: 500,
     fontFamily: "Montserrat",
+    textAlign: "left",
   },
   sendText: {
     fontWeight: "bold",
@@ -45,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(0),
       paddingLeft: theme.spacing(1),
     },
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "left",
+    },
   },
   sectionSpaceMission: {
     marginTop: theme.spacing(4),
@@ -60,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(5),
       marginLeft: theme.spacing(0),
+    },
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "left",
     },
   },
 }));

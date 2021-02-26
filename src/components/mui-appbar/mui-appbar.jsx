@@ -11,7 +11,7 @@ import { useStyles, StyledMenu, StyledMenuItem } from "./mui-appbar.style";
 import { Icon } from "@iconify/react";
 import logo from "../../assets/logo/logo-eoa-main.png";
 import { Box, Fade, ListItemIcon, Typography } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
 import uiEarthEast from "@iconify-icons/geo/ui-earth-east";
 import uiEarthWest from "@iconify-icons/geo/ui-earth-west";
@@ -25,6 +25,11 @@ export const MuiAppbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("en");
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const currentPage = (path, active, inactive) => {
+    return location.pathname === path ? active : inactive;
+  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -51,17 +56,35 @@ export const MuiAppbar = () => {
           </Box>
           <Box className={classes.menuItems}>
             <Box onClick={() => history.push("/")}>
-              <Typography className={classes.menuText}>
+              <Typography
+                className={currentPage(
+                  "/",
+                  classes.menuTextActive,
+                  classes.menuText
+                )}
+              >
                 <Trans count={1}>{t("NavbarItems.1")}</Trans>
               </Typography>
             </Box>
             <Box onClick={() => history.push("/company")}>
-              <Typography className={classes.menuText}>
+              <Typography
+                className={currentPage(
+                  "/company",
+                  classes.menuTextActive,
+                  classes.menuText
+                )}
+              >
                 <Trans count={1}>{t("NavbarItems.2")}</Trans>
               </Typography>
             </Box>
             <Box onClick={() => history.push("/project")}>
-              <Typography className={classes.menuText}>
+              <Typography
+                className={currentPage(
+                  "/project",
+                  classes.menuTextActive,
+                  classes.menuText
+                )}
+              >
                 <Trans count={1}>{t("NavbarItems.3")}</Trans>
               </Typography>
             </Box>

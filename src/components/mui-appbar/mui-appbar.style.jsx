@@ -74,6 +74,13 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
     },
   },
+  menuTextActive: {
+    fontFamily: "Poppins",
+    fontSize: "16px",
+    fontWeight: 600,
+    cursor: "pointer",
+    color: theme.palette.primary.main,
+  },
   logo: {
     position: "relative",
     width: "20%",

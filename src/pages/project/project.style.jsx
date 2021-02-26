@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pict: {
     width: "auto",
-    height: "200px",
+    height: "300px",
     background: "linear-gradient(to bottom, #F4F4F4, transparent)",
     borderRadius: "10px 10px 0px 0px",
     [theme.breakpoints.down("xs")]: {

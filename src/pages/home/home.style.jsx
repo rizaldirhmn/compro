@@ -119,6 +119,11 @@ const useStyles = makeStyles((theme) => ({
     animation: "$myEffect 3s linear 4s infinite",
     [theme.breakpoints.down("sm")]: {
       marginTop: "4rem",
+      width: "70%",
+      height: "auto",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "4rem",
       width: "100%",
       height: "auto",
     },

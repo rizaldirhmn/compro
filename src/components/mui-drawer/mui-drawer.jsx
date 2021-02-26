@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import { Box, ListItemText, Typography } from "@material-ui/core";
 import { NavbarButton } from "../navbar-button/navbar-button";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import {
   useStyles,
   AccordionSummary,
@@ -27,9 +27,14 @@ export const MuiDrawerComponent = ({ ...props }) => {
   const [expanded, setExpanded] = useState("panel1");
   const classes = useStyles();
   const { t } = useTranslation();
+  const location = useLocation();
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
+  };
+
+  const currentPage = (path, active, inactive) => {
+    return location.pathname === path ? active : inactive;
   };
 
   const history = useHistory();
@@ -59,7 +64,11 @@ export const MuiDrawerComponent = ({ ...props }) => {
                 >
                   <ListItemText
                     primary={`${t("NavbarItems.1")}`}
-                    className={classes.menuText}
+                    className={currentPage(
+                      "/",
+                      classes.menuTextActive,
+                      classes.menuText
+                    )}
                   />
                 </Box>
               </ListItem>
@@ -73,7 +82,11 @@ export const MuiDrawerComponent = ({ ...props }) => {
                 >
                   <ListItemText
                     primary={`${t("NavbarItems.2")}`}
-                    className={classes.menuText}
+                    className={currentPage(
+                      "/company",
+                      classes.menuTextActive,
+                      classes.menuText
+                    )}
                   />
                 </Box>
               </ListItem>
@@ -87,7 +100,11 @@ export const MuiDrawerComponent = ({ ...props }) => {
                 >
                   <ListItemText
                     primary={`${t("NavbarItems.3")}`}
-                    className={classes.menuText}
+                    className={currentPage(
+                      "/project",
+                      classes.menuTextActive,
+                      classes.menuText
+                    )}
                   />
                 </Box>
               </ListItem>

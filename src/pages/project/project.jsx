@@ -5,6 +5,7 @@ import { HeaderText } from "../../components/mui-typography/header-text/header-t
 import { SubtitleText } from "../../components/mui-typography/subtitle-text/subtitle-text";
 import useStyles from "./project.style";
 import { useTranslation } from "react-i18next";
+import data from "../../data/project";
 
 export const ProjectPage = () => {
   const classes = useStyles();
@@ -46,30 +47,28 @@ export const ProjectPage = () => {
             alignItems="center"
             spacing={5}
           >
-            {Array(8)
-              .fill("")
-              .map((_, idx) => (
-                <Grid key={idx} lg={3} md={4} sm={6} xs={12} item>
-                  <Box className={classes.flex}>
-                    <Box className={classes.pict}></Box>
-                    <Box className={classes.space}>
+            {data.map((d, idx) => (
+              <Grid key={idx} lg={3} md={4} sm={6} xs={12} item>
+                <Box className={classes.flex}>
+                  <Box className={classes.pict}></Box>
+                  <Box className={classes.space}>
+                    <Box>
+                      <Typography className={classes.title}>
+                        {d.project_name}
+                      </Typography>
+                    </Box>
+                    <Box className={classes.footerSpace}>
+                      <Box className={classes.circle}></Box>
                       <Box>
-                        <Typography className={classes.title}>
-                          D'Syirkah
+                        <Typography className={classes.category}>
+                          Category Service
                         </Typography>
-                      </Box>
-                      <Box className={classes.footerSpace}>
-                        <Box className={classes.circle}></Box>
-                        <Box>
-                          <Typography className={classes.category}>
-                            Category Service
-                          </Typography>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>
-                </Grid>
-              ))}
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Box>
       </Box>

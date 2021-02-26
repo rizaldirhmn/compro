@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       opacity: 0.7,
     },
+    "@media (min-width:1280px) and (max-width:1400px)": {
+      height: "400px",
+      objectFit: "cover",
+    },
   },
   historyDescription: {
     marginTop: theme.spacing(4),
