@@ -55,10 +55,6 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center",
     },
   },
-  container: {
-    maxWidth: "85%",
-    margin: "0 auto",
-  },
 }));
 
 export default useStyles;

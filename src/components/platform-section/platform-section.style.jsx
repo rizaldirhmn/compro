@@ -13,6 +13,11 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
     },
   },
+  space: {
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(4),
+    },
+  },
   iconBox: {
     height: "75px",
     width: "75px",

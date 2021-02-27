@@ -22,7 +22,7 @@ export const ClientSection = ({ t }) => {
 
   return (
     <>
-      <Box className={classes.container}>
+      <Box marginTop={7}>
         <Box
           display="flex"
           flexDirection="column"
@@ -38,26 +38,24 @@ export const ClientSection = ({ t }) => {
         </Box>
       </Box>
       <Box marginTop={5}>
-        <Box className={classes.container}>
-          <Carousel
-            breakPoints={breakpoints}
-            showArrows={false}
-            ref={(ref) => (arrowButton.current = ref)}
-            renderPagination={() => {
-              return <></>;
-            }}
-          >
-            {data.map((d, idx) => (
-              <Box key={idx}>
-                <img
-                  src={d.logo}
-                  alt={`Logo Client ${idx}`}
-                  className={classes.image}
-                />
-              </Box>
-            ))}
-          </Carousel>
-        </Box>
+        <Carousel
+          breakPoints={breakpoints}
+          showArrows={false}
+          ref={(ref) => (arrowButton.current = ref)}
+          renderPagination={() => {
+            return <></>;
+          }}
+        >
+          {data.map((d, idx) => (
+            <Box key={idx}>
+              <img
+                src={d.logo}
+                alt={`Logo Client ${idx}`}
+                className={classes.image}
+              />
+            </Box>
+          ))}
+        </Carousel>
       </Box>
       <Box
         display="flex"

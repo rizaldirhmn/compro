@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Grid, Typography, Container } from "@material-ui/core";
 import { DescriptionText } from "../../components/mui-typography/description-text/description-text";
 import { HeaderText } from "../../components/mui-typography/header-text/header-text";
 import { SubtitleText } from "../../components/mui-typography/subtitle-text/subtitle-text";
@@ -12,13 +12,9 @@ export const ProjectPage = () => {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
-      <Box className={classes.container}>
+      <Container>
         <Box marginTop={7}>
           <Grid
             container
@@ -75,7 +71,7 @@ export const ProjectPage = () => {
             ))}
           </Grid>
         </Box>
-      </Box>
+      </Container>
     </>
   );
 };

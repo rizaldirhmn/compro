@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { ActivitySection } from "../../components/activity-section/activity-section";
 import { HistorySection } from "../../components/history-section/history-section";
@@ -15,13 +15,9 @@ export const CompanyPage = React.memo(() => {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
-      <Box className={classes.container}>
+      <Container>
         <Box marginTop={10}>
           <Grid
             container
@@ -49,11 +45,13 @@ export const CompanyPage = React.memo(() => {
             </Grid>
           </Grid>
         </Box>
-      </Box>
+      </Container>
       <HistorySection t={t} />
-      <ActivitySection />
+      <Container>
+        <ActivitySection />
+      </Container>
       <Box className={classes.background}>
-        <Box className={classes.container}>
+        <Container>
           <Box padding="50px 0">
             <Grid
               container
@@ -97,10 +95,12 @@ export const CompanyPage = React.memo(() => {
               </Grid>
             </Grid>
           </Box>
-        </Box>
+        </Container>
       </Box>
-      <TeamSection t={t} />
-      <JobSection t={t} />
+      <Container>
+        <TeamSection t={t} />
+        <JobSection t={t} />
+      </Container>
       <Box display="flex" justifyContent="center">
         <Box marginTop={10} marginBottom={10}>
           <Typography className={classes.sendText}>

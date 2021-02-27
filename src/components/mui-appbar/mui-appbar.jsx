@@ -3,22 +3,28 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useStyles, StyledMenu, StyledMenuItem } from "./mui-appbar.style";
 import { Icon } from "@iconify/react";
 import logo from "../../assets/logo/logo-eoa-main.png";
-import { Box, Fade, ListItemIcon, Typography } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  Fade,
+  ListItemIcon,
+  Typography,
+} from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
 import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
 import uiEarthEast from "@iconify-icons/geo/ui-earth-east";
 import uiEarthWest from "@iconify-icons/geo/ui-earth-west";
 import i18next from "i18next";
 import { useTranslation, Trans } from "react-i18next";
+import { FooterComponent } from "../footer/footer";
 
-export const MuiAppbar = () => {
+export const MuiAppbar = ({ children }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const history = useHistory();
@@ -50,77 +56,81 @@ export const MuiAppbar = () => {
   return (
     <>
       <AppBar position="sticky" className={classes.Appbar}>
-        <Toolbar className={classes.toolbar}>
-          <Box>
-            <img src={logo} className={classes.logo} />
-          </Box>
-          <Box className={classes.menuItems}>
-            <Box onClick={() => history.push("/")}>
-              <Typography
-                className={currentPage(
-                  "/",
-                  classes.menuTextActive,
-                  classes.menuText
-                )}
-              >
-                <Trans count={1}>{t("NavbarItems.1")}</Trans>
-              </Typography>
+        <Container>
+          <Box className={classes.toolbar}>
+            <Box>
+              <img src={logo} className={classes.logo} />
             </Box>
-            <Box onClick={() => history.push("/company")}>
-              <Typography
-                className={currentPage(
-                  "/company",
-                  classes.menuTextActive,
-                  classes.menuText
-                )}
-              >
-                <Trans count={1}>{t("NavbarItems.2")}</Trans>
-              </Typography>
-            </Box>
-            <Box onClick={() => history.push("/project")}>
-              <Typography
-                className={currentPage(
-                  "/project",
-                  classes.menuTextActive,
-                  classes.menuText
-                )}
-              >
-                <Trans count={1}>{t("NavbarItems.3")}</Trans>
-              </Typography>
-            </Box>
-            <Box
-              display="flex"
-              onClick={handleClick}
-              className={classes.menuText}
-            >
-              <Box>
-                <Typography className={classes.menuText}>
-                  <Trans count={1}>{t("NavbarItems.4")}</Trans>
+            <Box className={classes.menuItems}>
+              <Box onClick={() => history.push("/")}>
+                <Typography
+                  className={currentPage(
+                    "/",
+                    classes.menuTextActive,
+                    classes.menuText
+                  )}
+                >
+                  <Trans count={1}>{t("NavbarItems.1")}</Trans>
                 </Typography>
               </Box>
-              <Box marginLeft={1}>
-                {Boolean(anchorEl) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              <Box onClick={() => history.push("/company")}>
+                <Typography
+                  className={currentPage(
+                    "/company",
+                    classes.menuTextActive,
+                    classes.menuText
+                  )}
+                >
+                  <Trans count={1}>{t("NavbarItems.2")}</Trans>
+                </Typography>
+              </Box>
+              <Box onClick={() => history.push("/project")}>
+                <Typography
+                  className={currentPage(
+                    "/project",
+                    classes.menuTextActive,
+                    classes.menuText
+                  )}
+                >
+                  <Trans count={1}>{t("NavbarItems.3")}</Trans>
+                </Typography>
+              </Box>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                onClick={handleClick}
+                className={classes.menuText}
+              >
+                <Box>
+                  <Typography className={classes.menuText}>
+                    <Trans count={1}>{t("NavbarItems.4")}</Trans>
+                  </Typography>
+                </Box>
+                <Box marginTop={1}>
+                  {Boolean(anchorEl) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                </Box>
               </Box>
             </Box>
+            <IconButton
+              className={classes.menuButton}
+              color="primary"
+              onClick={() => toggleDrawer()}
+              aria-label="menu"
+            >
+              {open ? <CloseIcon /> : <MenuIcon />}
+            </IconButton>
           </Box>
-          <IconButton
-            className={classes.menuButton}
-            color="primary"
-            onClick={() => toggleDrawer()}
-            aria-label="menu"
-          >
-            {open ? <CloseIcon /> : <MenuIcon />}
-          </IconButton>
-        </Toolbar>
+          <MuiDrawerComponent
+            open={open}
+            toggleDrawer={toggleDrawer}
+            handleChangeLanguage={handleChangeLanguage}
+            setLanguage={setLanguage}
+            language={language}
+            t={t}
+          />
+        </Container>
       </AppBar>
-      <MuiDrawerComponent
-        open={open}
-        toggleDrawer={toggleDrawer}
-        handleChangeLanguage={handleChangeLanguage}
-        setLanguage={setLanguage}
-        language={language}
-        t={t}
-      />
       <StyledMenu
         id="customized-menu"
         anchorEl={anchorEl}
@@ -170,6 +180,8 @@ export const MuiAppbar = () => {
           />
         </StyledMenuItem>
       </StyledMenu>
+      {children}
+      <FooterComponent />
     </>
   );
 };

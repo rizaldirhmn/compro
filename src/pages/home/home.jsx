@@ -1,12 +1,13 @@
 import {
   Box,
+  Container,
   Grid,
   Paper,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import React, { useEffect } from "react";
+import React from "react";
 import bg from "../../assets/home/bg-1.png";
 import illustration1 from "../../assets/illustrations/Jumbroton-Illustration.png";
 import { IntroductionSection } from "../../components/introduction-section/introduction-section";
@@ -25,21 +26,18 @@ export const HomePage = React.memo(() => {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       <Box position="relative">
         <img src={bg} alt="Background" className={classes.image} />
         <Box className={classes.overlay}>
-          <Box className={classes.container}>
+          <Container>
             <Grid
               container
               direction="row"
-              justify="space-between"
+              justify="center"
               alignItems="center"
+              className={classes.spacing}
             >
               <Grid item md={5} sm={12} xs={12}>
                 <Box>
@@ -68,12 +66,12 @@ export const HomePage = React.memo(() => {
                 </Grid>
               </Grid>
             </Grid>
-          </Box>
+          </Container>
         </Box>
       </Box>
-      <IntroductionSection t={t} />
-      <ServiceSection t={t} />
-      <Box className={classes.container}>
+      <Container>
+        <IntroductionSection t={t} />
+        <ServiceSection t={t} />
         <Box marginTop={10}>
           <Paper className={classes.paper}>
             <Box className={classes.flex}>
@@ -92,10 +90,10 @@ export const HomePage = React.memo(() => {
             </Box>
           </Paper>
         </Box>
-      </Box>
-      <PlatformSection t={t} />
-      <ClientSection t={t} />
-      <TechnologySection t={t} />
+        <PlatformSection t={t} />
+        <ClientSection t={t} />
+        <TechnologySection t={t} />
+      </Container>
     </>
   );
 });

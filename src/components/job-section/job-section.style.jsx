@@ -1,10 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "88%",
-    margin: "0 auto",
-  },
   header: {
     fontWeight: "bold",
     fontFamily: "Montserrat",
@@ -22,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
+    marginTop: "30px",
     height: "320px",
     [theme.breakpoints.down("xs")]: {
       height: "250px",

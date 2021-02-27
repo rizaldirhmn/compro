@@ -1,18 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "85%",
-    height: "100%",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      alignItems: "flex-start",
-    },
-  },
   cursor: {
     color: theme.palette.primary.main,
     cursor: "pointer",

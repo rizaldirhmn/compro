@@ -9,13 +9,15 @@ import swiftIcon from "@iconify-icons/logos/swift";
 import materialUi from "@iconify-icons/logos/material-ui";
 import laravelIcon from "@iconify-icons/logos/laravel";
 import phpIcon from "@iconify-icons/logos/php";
+import dockerIcon from "@iconify-icons/vscode-icons/file-type-docker2";
 
 const data = [
   { icon: nodejsIcon },
   { icon: goIcon },
   { icon: javascriptIcon },
-  { icon: kotlinIcon },
   { icon: reactIcon },
+  { icon: dockerIcon },
+  { icon: kotlinIcon },
   { icon: mysqlIcon },
   { icon: bootstrapIcon },
   { icon: swiftIcon },

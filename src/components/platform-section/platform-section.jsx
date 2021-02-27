@@ -14,65 +14,59 @@ export const PlatformSection = ({ t }) => {
 
   return (
     <>
-      <Box className={classes.container}>
-        <Box className={classes.flex}>
-          <Box flex={1}>
-            <Box marginTop={10}>
-              <SubtitleText text={`${t("PlatformText.1")}`} />
-            </Box>
-            <Box marginTop={3}>
-              <HeaderText text={`${t("PlatformHeader.1")}`} />
-            </Box>
+      <Box className={classes.flex}>
+        <Box flex={1}>
+          <Box marginTop={10}>
+            <SubtitleText text={`${t("PlatformText.1")}`} />
           </Box>
-          <Box flex={1}>
-            <Box marginTop={3}>
-              <DescriptionText text={`${t("PlatformDescription.1")}`} />
-            </Box>
+          <Box marginTop={3}>
+            <HeaderText text={`${t("PlatformHeader.1")}`} />
           </Box>
         </Box>
-        <Box className={classes.position}>
-          <Box marginTop={4}>
-            <Paper className={classes.platformPaper}>
-              <Box className={classes.platformSpace}>
-                <Box className={classes.iconBox}>
-                  <Icon icon={webIcon} className={classes.iconPlatform} />
-                </Box>
-                <Box marginLeft={6}>
-                  <Typography className={classes.platformContent}>
-                    www
-                  </Typography>
-                </Box>
-              </Box>
-            </Paper>
+        <Box flex={1}>
+          <Box marginTop={3}>
+            <DescriptionText text={`${t("PlatformDescription.1")}`} />
           </Box>
-          <Box marginTop={4}>
-            <Paper className={classes.platformPaper}>
-              <Box className={classes.platformSpace}>
-                <Box className={classes.iconBox}>
-                  <Icon icon={androidAlt} className={classes.iconPlatform} />
-                </Box>
-                <Box marginLeft={6}>
-                  <Typography className={classes.platformContent}>
-                    Android
-                  </Typography>
-                </Box>
+        </Box>
+      </Box>
+      <Box className={classes.position}>
+        <Box>
+          <Paper className={classes.platformPaper}>
+            <Box className={classes.platformSpace}>
+              <Box className={classes.iconBox}>
+                <Icon icon={webIcon} className={classes.iconPlatform} />
               </Box>
-            </Paper>
-          </Box>
-          <Box marginTop={4}>
-            <Paper className={classes.platformPaper}>
-              <Box className={classes.platformSpace}>
-                <Box className={classes.iconBox}>
-                  <Icon icon={appleFilled} className={classes.iconPlatform} />
-                </Box>
-                <Box marginLeft={6}>
-                  <Typography className={classes.platformContent}>
-                    iOS
-                  </Typography>
-                </Box>
+              <Box marginLeft={6}>
+                <Typography className={classes.platformContent}>www</Typography>
               </Box>
-            </Paper>
-          </Box>
+            </Box>
+          </Paper>
+        </Box>
+        <Box className={classes.space}>
+          <Paper className={classes.platformPaper}>
+            <Box className={classes.platformSpace}>
+              <Box className={classes.iconBox}>
+                <Icon icon={androidAlt} className={classes.iconPlatform} />
+              </Box>
+              <Box marginLeft={6}>
+                <Typography className={classes.platformContent}>
+                  Android
+                </Typography>
+              </Box>
+            </Box>
+          </Paper>
+        </Box>
+        <Box className={classes.space}>
+          <Paper className={classes.platformPaper}>
+            <Box className={classes.platformSpace}>
+              <Box className={classes.iconBox}>
+                <Icon icon={appleFilled} className={classes.iconPlatform} />
+              </Box>
+              <Box marginLeft={6}>
+                <Typography className={classes.platformContent}>iOS</Typography>
+              </Box>
+            </Box>
+          </Paper>
         </Box>
       </Box>
     </>

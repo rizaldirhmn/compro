@@ -1,22 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "85%",
-    height: "100%",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    "&:focus": {
-      outline: "none",
-      boxShadow: "none",
-    },
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      alignItems: "flex-start",
-    },
-  },
   arrow: {
     width: "35px",
     height: "35px",

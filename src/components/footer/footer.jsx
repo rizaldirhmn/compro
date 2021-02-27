@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Container } from "@material-ui/core";
 import React from "react";
 import useStyles from "./footer.style";
 import logo from "../../assets/logo/logo-eoa-white-2.png";
@@ -20,7 +20,7 @@ export const FooterComponent = () => {
     <>
       <Box className={classes.footerPaper}>
         <Box className={classes.overlay}></Box>
-        <Box className={classes.container}>
+        <Container>
           <Box p={1} paddingTop={5} className={classes.footerSpace}>
             <Box className={classes.footerItems}>
               <img
@@ -98,7 +98,7 @@ export const FooterComponent = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Container>
         <Box p={3} className={classes.footerCopyright}>
           <Typography className={classes.footerTextCopyright}>
             Copyright by EOA Technology International 2021 All Right Reserved

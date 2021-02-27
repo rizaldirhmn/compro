@@ -28,21 +28,14 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     paddingLeft: "10px",
-    width: "80%",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
-      width: "60%",
+      width: "65%",
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: theme.spacing(6),
-    },
-  },
-  boxPosition: {
-    [theme.breakpoints.down("sm")]: {
-      margin: "0 auto",
-      paddingLeft: "30px",
+      marginLeft: theme.spacing(8),
     },
   },
   descriptionText: {
@@ -51,10 +44,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "fit-content",
     },
-  },
-  container: {
-    maxWidth: "85%",
-    margin: "0 auto",
   },
 }));
 

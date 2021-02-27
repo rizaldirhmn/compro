@@ -30,16 +30,15 @@ const StyledMenuItem = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
   },
   Appbar: {
     background: "#FFFFFF",
     boxShadow: "none",
-    overflowY: "auto",
   },
-  title: {
-    flexGrow: 1,
-  },
+  // title: {
+  //   flexGrow: 1,
+  // },
   active: {
     color: theme.palette.primary.main,
     "&:hover": {
@@ -59,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
   menuItems: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
     width: "450px",
     [theme.breakpoints.down("sm")]: {
       display: "none",
@@ -82,7 +82,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
   },
   logo: {
-    position: "relative",
     width: "20%",
     height: "auto",
     [theme.breakpoints.down("sm")]: {
@@ -93,17 +92,13 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "0 6rem",
+    alignItems: "center",
     [theme.breakpoints.down("sm")]: {
-      width: "85%",
       margin: "0 auto",
-      padding: "0.5rem 0",
+      padding: "7px 0",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-    },
-    [theme.breakpoints.down("xs")]: {
-      maxWidth: "85%",
     },
   },
 }));

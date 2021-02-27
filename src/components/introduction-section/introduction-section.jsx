@@ -15,79 +15,82 @@ export const IntroductionSection = ({ t }) => {
 
   return (
     <>
-      <Box className={classes.container}>
-        <Box className={classes.introductions}>
-          <Box flex={1.5}>
-            <Box marginTop={6}>
-              <SubtitleText text={`${t("IntroductionText.1")}`} />
-            </Box>
-            <Box marginTop={3}>
-              <HeaderText text={`${t("IntroductionHeader.1")}`} />
-            </Box>
-            <Box className={classes.descriptionText}>
-              <DescriptionText text={`${t("IntroductionDescription.1")}`} />
-            </Box>
+      <Box className={classes.introductions}>
+        <Box flex={1.5}>
+          <Box marginTop={6}>
+            <SubtitleText text={`${t("IntroductionText.1")}`} />
           </Box>
-          <Box flex={1}>
-            <Grid container direction="row" justify="flex-end">
-              <Grid item sm={6} xs={12}>
-                <Box marginTop={6}>
-                  <Box className={classes.box}>
-                    <Box className={classes.circle}>
-                      <Icon icon={bookReader} className={classes.icon} />
-                    </Box>
-                    <Box marginTop={2}>
-                      <Typography variant="h5" className={classes.text}>
-                        {t("IntroductionContent.1")}
-                      </Typography>
-                    </Box>
+          <Box marginTop={3}>
+            <HeaderText text={`${t("IntroductionHeader.1")}`} />
+          </Box>
+          <Box className={classes.descriptionText}>
+            <DescriptionText text={`${t("IntroductionDescription.1")}`} />
+          </Box>
+        </Box>
+        <Box flex={1}>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="baseline"
+          >
+            <Grid item sm={6} xs={12}>
+              <Box marginTop={6}>
+                <Box className={classes.box}>
+                  <Box className={classes.circle}>
+                    <Icon icon={bookReader} className={classes.icon} />
+                  </Box>
+                  <Box marginTop={2}>
+                    <Typography variant="h5" className={classes.text}>
+                      {t("IntroductionContent.1")}
+                    </Typography>
                   </Box>
                 </Box>
-              </Grid>
-              <Grid item sm={6} xs={12}>
-                <Box marginTop={6}>
-                  <Box className={classes.box}>
-                    <Box className={classes.circle}>
-                      <Icon icon={portraitIcon} className={classes.icon} />
-                    </Box>
-                    <Box marginTop={2}>
-                      <Typography variant="h5" className={classes.text}>
-                        {t("IntroductionContent.2")}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item sm={6} xs={12}>
-                <Box marginTop={6}>
-                  <Box className={classes.box}>
-                    <Box className={classes.circle}>
-                      <Icon icon={fileContract} className={classes.icon} />
-                    </Box>
-                    <Box marginTop={2}>
-                      <Typography variant="h5" className={classes.text}>
-                        {t("IntroductionContent.3")}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item sm={6} xs={12}>
-                <Box marginTop={6}>
-                  <Box className={classes.box}>
-                    <Box className={classes.circle}>
-                      <Icon icon={laptopCode} className={classes.icon} />
-                    </Box>
-                    <Box marginTop={2}>
-                      <Typography variant="h5" className={classes.text}>
-                        {t("IntroductionContent.4")}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Box>
-              </Grid>
+              </Box>
             </Grid>
-          </Box>
+            <Grid item sm={6} xs={12}>
+              <Box marginTop={6}>
+                <Box className={classes.box}>
+                  <Box className={classes.circle}>
+                    <Icon icon={portraitIcon} className={classes.icon} />
+                  </Box>
+                  <Box marginTop={2}>
+                    <Typography variant="h5" className={classes.text}>
+                      {t("IntroductionContent.2")}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item sm={6} xs={12}>
+              <Box marginTop={6}>
+                <Box className={classes.box}>
+                  <Box className={classes.circle}>
+                    <Icon icon={fileContract} className={classes.icon} />
+                  </Box>
+                  <Box marginTop={2}>
+                    <Typography variant="h5" className={classes.text}>
+                      {t("IntroductionContent.3")}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item sm={6} xs={12}>
+              <Box marginTop={6}>
+                <Box className={classes.box}>
+                  <Box className={classes.circle}>
+                    <Icon icon={laptopCode} className={classes.icon} />
+                  </Box>
+                  <Box marginTop={2}>
+                    <Typography variant="h5" className={classes.text}>
+                      {t("IntroductionContent.4")}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     </>

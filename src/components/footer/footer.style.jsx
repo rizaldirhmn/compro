@@ -2,10 +2,6 @@ import { makeStyles } from "@material-ui/styles";
 import image from "../../assets/images/footer-image.png";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "90%",
-    margin: "0 auto",
-  },
   subText: {
     display: "flex",
     flexDirection: "column",

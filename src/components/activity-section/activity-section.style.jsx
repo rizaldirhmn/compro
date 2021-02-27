@@ -1,10 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "88%",
-    margin: "0 auto",
-  },
   imageActivity: {
     width: "100%",
     height: "auto",

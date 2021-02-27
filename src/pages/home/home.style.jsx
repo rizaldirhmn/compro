@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontFamily: "Poppins",
     [theme.breakpoints.down("sm")]: {
-      marginTop: "60px",
+      marginTop: "40px",
       lineHeight: "50px",
     },
   },
@@ -76,16 +76,13 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px",
     },
   },
-  container: {
-    maxWidth: "85%",
-    height: "100%",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+  spacing: {
+    marginTop: "10%",
     [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      alignItems: "flex-start",
+      marginTop: "4%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "0",
     },
   },
   paper: {
@@ -119,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     animation: "$myEffect 3s linear 4s infinite",
     [theme.breakpoints.down("sm")]: {
       marginTop: "4rem",
-      width: "70%",
+      width: "55%",
       height: "auto",
     },
     [theme.breakpoints.down("xs")]: {

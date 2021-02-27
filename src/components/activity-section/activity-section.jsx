@@ -12,71 +12,69 @@ export const ActivitySection = () => {
   const classes = useStyles();
   return (
     <>
-      <Box className={classes.container}>
-        <Box marginTop={12}>
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-            spacing={5}
-          >
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity1}
-                  alt="Activity 1"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity2}
-                  alt="Activity 2"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity3}
-                  alt="Activity 3"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity4}
-                  alt="Activity 4"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity5}
-                  alt="Activity 5"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
-            <Grid item md={4} sm={6} xs={6}>
-              <Box>
-                <img
-                  src={activity6}
-                  alt="Activity 6"
-                  className={classes.imageActivity}
-                />
-              </Box>
-            </Grid>
+      <Box marginTop={12}>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={3}
+        >
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity1}
+                alt="Activity 1"
+                className={classes.imageActivity}
+              />
+            </Box>
           </Grid>
-        </Box>
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity2}
+                alt="Activity 2"
+                className={classes.imageActivity}
+              />
+            </Box>
+          </Grid>
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity3}
+                alt="Activity 3"
+                className={classes.imageActivity}
+              />
+            </Box>
+          </Grid>
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity4}
+                alt="Activity 4"
+                className={classes.imageActivity}
+              />
+            </Box>
+          </Grid>
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity5}
+                alt="Activity 5"
+                className={classes.imageActivity}
+              />
+            </Box>
+          </Grid>
+          <Grid item md={4} sm={6} xs={6}>
+            <Box>
+              <img
+                src={activity6}
+                alt="Activity 6"
+                className={classes.imageActivity}
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </>
   );

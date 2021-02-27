@@ -6,12 +6,12 @@ import client5 from "../assets/client-logos/client-5.png";
 import client6 from "../assets/client-logos/client-6.png";
 
 const data = [
-  { logo: client1 },
+  { logo: client5 },
+  { logo: client6 },
   { logo: client2 },
   { logo: client3 },
   { logo: client4 },
-  { logo: client5 },
-  { logo: client6 },
+  { logo: client1 },
 ];
 
 export default data;

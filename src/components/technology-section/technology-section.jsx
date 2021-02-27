@@ -22,7 +22,7 @@ export const TechnologySection = ({ t }) => {
 
   return (
     <>
-      <Box className={classes.container}>
+      <Box>
         <Box
           display="flex"
           flexDirection="column"
@@ -39,7 +39,7 @@ export const TechnologySection = ({ t }) => {
         </Box>
       </Box>
       <Box marginTop={5}>
-        <Box className={classes.container}>
+        <Box>
           <Carousel
             breakPoints={breakpoints}
             showArrows={false}
