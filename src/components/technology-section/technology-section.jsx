@@ -15,7 +15,7 @@ export const TechnologySection = ({ t }) => {
 
   const breakpoints = [
     { width: 600, itemsToShow: 2, itemsToScroll: 1 },
-    { width: 960, itemsToShow: 5, itemsToScroll: 1 },
+    { width: 960, itemsToShow: 6, itemsToScroll: 1 },
     { width: 1280, itemsToShow: 6, itemsToScroll: 1 },
     { width: 1920, itemsToShow: 8, itemsToScroll: 1 },
   ];

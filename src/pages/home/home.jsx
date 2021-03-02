@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import React from "react";
-import bg from "../../assets/home/bg-1.png";
+import bg from "../../assets/home/bg-2.png";
 import illustration1 from "../../assets/illustrations/Jumbroton-Illustration.png";
 import { IntroductionSection } from "../../components/introduction-section/introduction-section";
 import { ServiceSection } from "../../components/service-section/service-section";

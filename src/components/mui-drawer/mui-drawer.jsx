@@ -132,21 +132,19 @@ export const MuiDrawerComponent = ({ ...props }) => {
                 <AccordionDetails>
                   <Box className={classes.accordionSpace}>
                     <NavbarButton
-                      text={`${t("Languages.1")}`}
-                      color="primary"
                       onClick={() => {
                         handleChangeLanguage("en");
                         setLanguage("en");
                       }}
+                      lang="en"
                       condition={language === "en"}
                     />
                     <NavbarButton
-                      text={`${t("Languages.2")}`}
-                      color="primary"
                       onClick={() => {
                         handleChangeLanguage("id");
                         setLanguage("id");
                       }}
+                      lang="id"
                       condition={language === "id"}
                     />
                   </Box>

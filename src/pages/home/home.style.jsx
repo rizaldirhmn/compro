@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     left: "0",
     width: "100%",
     height: "100vh",
-    backgroundColor: "rgba(22, 161, 224, 0.7)",
+    backgroundColor: "rgba(22, 161, 224, 0.75)",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       height: "900px",

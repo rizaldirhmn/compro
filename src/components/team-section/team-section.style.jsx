@@ -25,10 +25,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   teamAvatar: {
-    width: "130px",
-    height: "130px",
+    width: "180px",
+    height: "180px",
     backgroundColor: "#F4F4F4",
     borderRadius: "25px",
+    [theme.breakpoints.down("sm")]: {
+      width: "160px",
+      height: "160px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "140px",
+      height: "140px",
+    },
   },
   teamName: {
     fontFamily: "Montserrat",

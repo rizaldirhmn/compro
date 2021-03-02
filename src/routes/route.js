@@ -8,14 +8,14 @@ import { ProjectPage } from "../pages/project/project";
 const PublicRoute = () => {
   return (
     <>
-      <MuiAppbar>
-        <ScrollToTop />
-        <Switch>
+      <Switch>
+        <MuiAppbar>
+          <ScrollToTop />
           <Route exact path="/" component={HomePage} />
           <Route path="/company" component={CompanyPage} />
           <Route path="/project" component={ProjectPage} />
-        </Switch>
-      </MuiAppbar>
+        </MuiAppbar>
+      </Switch>
     </>
   );
 };

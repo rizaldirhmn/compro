@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import ListItemText from "@material-ui/core/ListItemText";
+import React, { useState } from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import AppBar from "@material-ui/core/AppBar";
@@ -18,11 +17,11 @@ import {
 } from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
 import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
-import uiEarthEast from "@iconify-icons/geo/ui-earth-east";
-import uiEarthWest from "@iconify-icons/geo/ui-earth-west";
 import i18next from "i18next";
 import { useTranslation, Trans } from "react-i18next";
 import { FooterComponent } from "../footer/footer";
+import englishIcon from "@iconify-icons/cif/gb";
+import idIcon from "@iconify-icons/cif/id";
 
 export const MuiAppbar = ({ children }) => {
   const classes = useStyles();
@@ -55,7 +54,7 @@ export const MuiAppbar = ({ children }) => {
 
   return (
     <>
-      <AppBar position="sticky" className={classes.Appbar}>
+      <AppBar position="sticky" elevation={1} className={classes.Appbar}>
         <Container>
           <Box className={classes.toolbar}>
             <Box>
@@ -98,16 +97,18 @@ export const MuiAppbar = ({ children }) => {
               <Box
                 display="flex"
                 justifyContent="center"
-                alignItems="center"
+                alignItems="flex-end"
                 onClick={handleClick}
                 className={classes.menuText}
               >
                 <Box>
-                  <Typography className={classes.menuText}>
-                    <Trans count={1}>{t("NavbarItems.4")}</Trans>
-                  </Typography>
+                  {language === "en" ? (
+                    <Icon icon={englishIcon} />
+                  ) : (
+                    <Icon icon={idIcon} />
+                  )}
                 </Box>
-                <Box marginTop={1}>
+                <Box position="relative" top={4} marginLeft={1}>
                   {Boolean(anchorEl) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 </Box>
               </Box>
@@ -144,40 +145,34 @@ export const MuiAppbar = ({ children }) => {
             handleChangeLanguage("en");
             setLanguage("en");
           }}
+          disableGutters={true}
         >
           <ListItemIcon>
             <Icon
               color={language === "en" ? "#16A1E0" : "#C4C4C4"}
-              icon={uiEarthWest}
-              className={classes.icon}
-              width="1.5em"
-              height="1.5em"
+              icon={englishIcon}
+              style={{ margin: "0 auto" }}
+              width="2em"
+              height="2em"
             />
           </ListItemIcon>
-          <ListItemText
-            primary={`${t("Languages.1")}`}
-            className={language === "en" ? classes.active : ""}
-          />
         </StyledMenuItem>
         <StyledMenuItem
           onClick={() => {
             handleChangeLanguage("id");
             setLanguage("id");
           }}
+          disableGutters={true}
         >
           <ListItemIcon>
             <Icon
               color={language === "id" ? "#16A1E0" : "#C4C4C4"}
-              icon={uiEarthEast}
-              className={classes.icon}
-              width="1.5em"
-              height="1.5em"
+              icon={idIcon}
+              style={{ margin: "0 auto" }}
+              width="2em"
+              height="2em"
             />
           </ListItemIcon>
-          <ListItemText
-            primary={`${t("Languages.2")}`}
-            className={language === "id" ? classes.active : ""}
-          />
         </StyledMenuItem>
       </StyledMenu>
       {children}

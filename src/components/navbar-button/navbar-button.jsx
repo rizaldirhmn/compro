@@ -2,28 +2,32 @@ import { Button } from "@material-ui/core";
 import React from "react";
 import useStyles from "./navbar-button.style";
 import { Icon } from "@iconify/react";
-import uiEarthEast from "@iconify-icons/geo/ui-earth-east";
-import uiEarthWest from "@iconify-icons/geo/ui-earth-west";
-import { Trans } from "react-i18next";
+import englishIcon from "@iconify-icons/cif/gb";
+import idIcon from "@iconify-icons/cif/id";
 
-export const NavbarButton = ({ text, condition, i18nKey, ...props }) => {
+export const NavbarButton = ({ condition, ...props }) => {
   const classes = useStyles();
   return (
     <Button
       {...props}
-      startIcon={
-        text === "English" ? (
-          <Icon icon={uiEarthWest} />
-        ) : (
-          <Icon icon={uiEarthEast} />
-        )
-      }
-      className={condition ? classes.containedButton : classes.outlinedButton}
+      className={condition ? classes.buttonActive : classes.button}
       disableElevation={true}
     >
-      <Trans i18nKey={i18nKey} count={1}>
-        {text}
-      </Trans>
+      {props.lang === "en" ? (
+        <Icon
+          icon={englishIcon}
+          style={{ margin: "0 auto" }}
+          width="2.5em"
+          height="2em"
+        />
+      ) : (
+        <Icon
+          icon={idIcon}
+          style={{ margin: "0 auto" }}
+          width="2.5em"
+          height="2em"
+        />
+      )}
     </Button>
   );
 };

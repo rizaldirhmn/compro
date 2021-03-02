@@ -2,15 +2,24 @@ import { makeStyles } from "@material-ui/styles";
 import { withStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem } from "@material-ui/core";
 
-const StyledMenu = withStyles({})((props) => (
+const StyledMenu = withStyles({
+  paper: {
+    boxShadow: "0px 16px 40px rgba(112, 144, 176, 0.15)",
+  },
+})((props) => (
   <Menu
     elevation={0}
     disableScrollLock={true}
+    disableAutoFocusItem={true}
     getContentAnchorEl={null}
     style={{ zIndex: 1251 }}
     anchorOrigin={{
       vertical: "bottom",
       horizontal: "center",
+    }}
+    MenuListProps={{
+      style: { boxShadow: "0px 16px 40px rgba(112, 144, 176, 0.15)" },
+      disablePadding: true,
     }}
     transformOrigin={{
       vertical: "top",
@@ -29,16 +38,9 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    // flexGrow: 1,
-  },
   Appbar: {
     background: "#FFFFFF",
-    boxShadow: "none",
   },
-  // title: {
-  //   flexGrow: 1,
-  // },
   active: {
     color: theme.palette.primary.main,
     "&:hover": {
@@ -59,15 +61,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "450px",
+    width: "400px",
+    fontFamily: "Poppins",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
   menuText: {
-    fontFamily: "Poppins",
+    fontFamily: "Poppins !important",
     fontSize: "16px",
-    fontWeight: 500,
+    fontWeight: "500 !important",
     cursor: "pointer",
     transition: "0.3s all ease-out",
     "&:hover": {
@@ -75,9 +78,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menuTextActive: {
-    fontFamily: "Poppins",
+    fontFamily: "Poppins !important",
     fontSize: "16px",
-    fontWeight: 600,
+    fontWeight: "600 !important",
     cursor: "pointer",
     color: theme.palette.primary.main,
   },

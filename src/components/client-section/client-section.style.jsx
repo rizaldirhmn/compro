@@ -6,8 +6,8 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   image: {
-    width: "170px",
-    height: "170px",
+    width: "150px",
+    height: "150px",
     transition: "opacity 0.3s ease-in-out",
     "&:hover": {
       opacity: 0.7,
