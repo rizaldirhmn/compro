@@ -15,7 +15,7 @@ export const HistorySection = ({ t }) => {
   return (
     <>
       <Box className={classes.containerHistory}>
-        <Box marginTop={12}>
+        <Box marginTop={10}>
           <Box>
             <Grid
               container

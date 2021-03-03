@@ -15,7 +15,13 @@ const useStyles = makeStyles((theme) => ({
   },
   space: {
     [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(4),
+      marginTop: theme.spacing(10),
+    },
+  },
+  parentSpace: {
+    marginTop: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(0),
     },
   },
   iconBox: {
@@ -26,16 +32,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "#fff",
     borderRadius: 25,
-  },
-  position: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: "80px",
-    [theme.breakpoints.down("sm")]: {
-      alignItems: "stretch",
-      flexDirection: "column",
-    },
   },
   platformPaper: {
     boxShadow: "none",

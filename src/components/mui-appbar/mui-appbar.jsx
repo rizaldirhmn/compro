@@ -6,7 +6,6 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useStyles, StyledMenu, StyledMenuItem } from "./mui-appbar.style";
-import { Icon } from "@iconify/react";
 import logo from "../../assets/logo/logo-eoa-main.png";
 import {
   Box,
@@ -20,8 +19,8 @@ import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
 import i18next from "i18next";
 import { useTranslation, Trans } from "react-i18next";
 import { FooterComponent } from "../footer/footer";
-import englishIcon from "@iconify-icons/cif/gb";
-import idIcon from "@iconify-icons/cif/id";
+import englishIcon from "../../assets/icons/great-britain.svg";
+import indonesianIcon from "../../assets/icons/indonesia.svg";
 
 export const MuiAppbar = ({ children }) => {
   const classes = useStyles();
@@ -103,12 +102,20 @@ export const MuiAppbar = ({ children }) => {
               >
                 <Box>
                   {language === "en" ? (
-                    <Icon icon={englishIcon} />
+                    <img
+                      src={englishIcon}
+                      alt="icons"
+                      className={classes.icon}
+                    />
                   ) : (
-                    <Icon icon={idIcon} />
+                    <img
+                      src={indonesianIcon}
+                      alt="icons"
+                      className={classes.icon}
+                    />
                   )}
                 </Box>
-                <Box position="relative" top={4} marginLeft={1}>
+                <Box marginLeft={1}>
                   {Boolean(anchorEl) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 </Box>
               </Box>
@@ -116,7 +123,7 @@ export const MuiAppbar = ({ children }) => {
             <IconButton
               className={classes.menuButton}
               color="primary"
-              onClick={() => toggleDrawer()}
+              onClick={toggleDrawer}
               aria-label="menu"
             >
               {open ? <CloseIcon /> : <MenuIcon />}
@@ -148,13 +155,7 @@ export const MuiAppbar = ({ children }) => {
           disableGutters={true}
         >
           <ListItemIcon>
-            <Icon
-              color={language === "en" ? "#16A1E0" : "#C4C4C4"}
-              icon={englishIcon}
-              style={{ margin: "0 auto" }}
-              width="2em"
-              height="2em"
-            />
+            <img src={englishIcon} alt="icons" className={classes.icon} />
           </ListItemIcon>
         </StyledMenuItem>
         <StyledMenuItem
@@ -165,13 +166,7 @@ export const MuiAppbar = ({ children }) => {
           disableGutters={true}
         >
           <ListItemIcon>
-            <Icon
-              color={language === "id" ? "#16A1E0" : "#C4C4C4"}
-              icon={idIcon}
-              style={{ margin: "0 auto" }}
-              width="2em"
-              height="2em"
-            />
+            <img src={indonesianIcon} alt="icons" className={classes.icon} />
           </ListItemIcon>
         </StyledMenuItem>
       </StyledMenu>

@@ -15,7 +15,7 @@ export const ProjectPage = () => {
   return (
     <>
       <Container>
-        <Box marginTop={7}>
+        <Box marginTop={10}>
           <Grid
             container
             direction="row"
@@ -39,7 +39,7 @@ export const ProjectPage = () => {
             </Grid>
           </Grid>
         </Box>
-        <Box marginTop={7}>
+        <Box marginTop={10}>
           <Grid
             container
             direction="row"

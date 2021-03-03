@@ -92,6 +92,11 @@ const useStyles = makeStyles((theme) => ({
       height: "auto",
     },
   },
+  icon: {
+    width: "30px",
+    height: "auto",
+    margin: "0 auto",
+  },
   toolbar: {
     display: "flex",
     justifyContent: "space-between",

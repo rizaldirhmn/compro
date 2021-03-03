@@ -28,9 +28,8 @@ export const TechnologySection = ({ t }) => {
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          marginBottom={10}
         >
-          <Box marginTop={10}>
+          <Box marginTop={14}>
             <SubtitleText text={`${t("DevelopmentText.1")}`} />
           </Box>
           <Box marginTop={3} textAlign="center">
@@ -38,7 +37,7 @@ export const TechnologySection = ({ t }) => {
           </Box>
         </Box>
       </Box>
-      <Box marginTop={5}>
+      <Box marginTop={7}>
         <Box>
           <Carousel
             breakPoints={breakpoints}
@@ -60,7 +59,7 @@ export const TechnologySection = ({ t }) => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        marginTop={10}
+        marginTop={7}
         marginBottom={7}
       >
         <Box

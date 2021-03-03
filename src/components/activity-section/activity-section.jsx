@@ -12,7 +12,7 @@ export const ActivitySection = () => {
   const classes = useStyles();
   return (
     <>
-      <Box marginTop={12}>
+      <Box marginTop={10}>
         <Grid
           container
           direction="row"

@@ -17,7 +17,7 @@ export const IntroductionSection = ({ t }) => {
     <>
       <Box className={classes.introductions}>
         <Box flex={1.5}>
-          <Box marginTop={6}>
+          <Box marginTop={10}>
             <SubtitleText text={`${t("IntroductionText.1")}`} />
           </Box>
           <Box marginTop={3}>
@@ -27,7 +27,7 @@ export const IntroductionSection = ({ t }) => {
             <DescriptionText text={`${t("IntroductionDescription.1")}`} />
           </Box>
         </Box>
-        <Box flex={1}>
+        <Box flex={1} marginTop={10}>
           <Grid
             container
             direction="row"

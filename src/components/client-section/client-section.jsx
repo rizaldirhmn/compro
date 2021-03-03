@@ -22,7 +22,7 @@ export const ClientSection = ({ t }) => {
 
   return (
     <>
-      <Box marginTop={7}>
+      <Box>
         <Box
           display="flex"
           flexDirection="column"
@@ -37,7 +37,7 @@ export const ClientSection = ({ t }) => {
           </Box>
         </Box>
       </Box>
-      <Box marginTop={5}>
+      <Box marginTop={7}>
         <Carousel
           breakPoints={breakpoints}
           showArrows={false}
@@ -61,8 +61,7 @@ export const ClientSection = ({ t }) => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        marginTop={10}
-        marginBottom={7}
+        marginTop={7}
       >
         <Box
           marginRight={4}

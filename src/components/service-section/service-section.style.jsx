@@ -46,13 +46,19 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "auto",
     [theme.breakpoints.down("md")]: {
-      width: "80%",
+      width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+      width: "50%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "80%",
+      marginTop: theme.spacing(4),
+    },
+  },
+  position: {
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(8),
     },
   },
 }));

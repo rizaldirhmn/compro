@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Paper, Typography } from "@material-ui/core";
+import { Box, Grid, Paper, Typography } from "@material-ui/core";
 import useStyles from "./platform-section.style";
 import { SubtitleText } from "../mui-typography/subtitle-text/subtitle-text";
 import { DescriptionText } from "../mui-typography/description-text/description-text";
@@ -29,45 +29,57 @@ export const PlatformSection = ({ t }) => {
           </Box>
         </Box>
       </Box>
-      <Box className={classes.position}>
-        <Box>
-          <Paper className={classes.platformPaper}>
-            <Box className={classes.platformSpace}>
-              <Box className={classes.iconBox}>
-                <Icon icon={webIcon} className={classes.iconPlatform} />
-              </Box>
-              <Box marginLeft={6}>
-                <Typography className={classes.platformContent}>www</Typography>
-              </Box>
+      <Box className={classes.parentSpace}>
+        <Grid container justify="center" spacing={4}>
+          <Grid item xs={12} sm={8} md={6} lg={4}>
+            <Box className={classes.space}>
+              <Paper className={classes.platformPaper}>
+                <Box className={classes.platformSpace}>
+                  <Box className={classes.iconBox}>
+                    <Icon icon={webIcon} className={classes.iconPlatform} />
+                  </Box>
+                  <Box marginLeft={6}>
+                    <Typography className={classes.platformContent}>
+                      www
+                    </Typography>
+                  </Box>
+                </Box>
+              </Paper>
             </Box>
-          </Paper>
-        </Box>
-        <Box className={classes.space}>
-          <Paper className={classes.platformPaper}>
-            <Box className={classes.platformSpace}>
-              <Box className={classes.iconBox}>
-                <Icon icon={androidAlt} className={classes.iconPlatform} />
-              </Box>
-              <Box marginLeft={6}>
-                <Typography className={classes.platformContent}>
-                  Android
-                </Typography>
-              </Box>
+          </Grid>
+          <Grid item xs={12} sm={8} md={6} lg={4}>
+            <Box>
+              <Paper className={classes.platformPaper}>
+                <Box className={classes.platformSpace}>
+                  <Box className={classes.iconBox}>
+                    <Icon icon={androidAlt} className={classes.iconPlatform} />
+                  </Box>
+                  <Box marginLeft={6}>
+                    <Typography className={classes.platformContent}>
+                      Android
+                    </Typography>
+                  </Box>
+                </Box>
+              </Paper>
             </Box>
-          </Paper>
-        </Box>
-        <Box className={classes.space}>
-          <Paper className={classes.platformPaper}>
-            <Box className={classes.platformSpace}>
-              <Box className={classes.iconBox}>
-                <Icon icon={appleFilled} className={classes.iconPlatform} />
-              </Box>
-              <Box marginLeft={6}>
-                <Typography className={classes.platformContent}>iOS</Typography>
-              </Box>
+          </Grid>
+          <Grid item xs={12} sm={8} md={6} lg={4}>
+            <Box>
+              <Paper className={classes.platformPaper}>
+                <Box className={classes.platformSpace}>
+                  <Box className={classes.iconBox}>
+                    <Icon icon={appleFilled} className={classes.iconPlatform} />
+                  </Box>
+                  <Box marginLeft={6}>
+                    <Typography className={classes.platformContent}>
+                      iOS
+                    </Typography>
+                  </Box>
+                </Box>
+              </Paper>
             </Box>
-          </Paper>
-        </Box>
+          </Grid>
+        </Grid>
       </Box>
     </>
   );

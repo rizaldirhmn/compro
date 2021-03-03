@@ -72,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "50px",
     backgroundColor: "none",
     overflow: "auto",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
   },
   listItem: {
     padding: "10px",
@@ -100,12 +103,9 @@ const useStyles = makeStyles((theme) => ({
   accordionSpace: {
     display: "flex",
     width: "100%",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     [theme.breakpoints.down("sm")]: {
-      justifyContent: "space-around",
-    },
-    [theme.breakpoints.down("xs")]: {
-      justifyContent: "space-between",
+      justifyContent: "space-evenly",
     },
   },
 }));

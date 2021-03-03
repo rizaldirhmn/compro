@@ -31,6 +31,11 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 5px",
     },
   },
+  icon: {
+    width: "30px",
+    height: "auto",
+    margin: "0 auto",
+  },
 }));
 
 export default useStyles;
