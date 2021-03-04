@@ -19,7 +19,7 @@ import { MuiDrawerComponent } from "../mui-drawer/mui-drawer";
 import i18next from "i18next";
 import { useTranslation, Trans } from "react-i18next";
 import { FooterComponent } from "../footer/footer";
-import englishIcon from "../../assets/icons/great-britain.svg";
+import USIcon from "../../assets/icons/united-states-of-america.svg";
 import indonesianIcon from "../../assets/icons/indonesia.svg";
 
 export const MuiAppbar = ({ children }) => {
@@ -96,17 +96,13 @@ export const MuiAppbar = ({ children }) => {
               <Box
                 display="flex"
                 justifyContent="center"
-                alignItems="flex-end"
+                alignItems="center"
                 onClick={handleClick}
                 className={classes.menuText}
               >
                 <Box>
                   {language === "en" ? (
-                    <img
-                      src={englishIcon}
-                      alt="icons"
-                      className={classes.icon}
-                    />
+                    <img src={USIcon} alt="icons" className={classes.icon} />
                   ) : (
                     <img
                       src={indonesianIcon}
@@ -155,7 +151,7 @@ export const MuiAppbar = ({ children }) => {
           disableGutters={true}
         >
           <ListItemIcon>
-            <img src={englishIcon} alt="icons" className={classes.icon} />
+            <img src={USIcon} alt="icons" className={classes.icon} />
           </ListItemIcon>
         </StyledMenuItem>
         <StyledMenuItem

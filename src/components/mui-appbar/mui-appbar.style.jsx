@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
-    width: "30px",
+    width: "32px",
     height: "auto",
     margin: "0 auto",
   },
