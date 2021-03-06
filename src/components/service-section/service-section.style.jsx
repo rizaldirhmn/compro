@@ -52,13 +52,19 @@ const useStyles = makeStyles((theme) => ({
       width: "50%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "80%",
+      width: "100%",
       marginTop: theme.spacing(4),
     },
   },
   position: {
     [theme.breakpoints.down("xs")]: {
-      marginLeft: theme.spacing(8),
+      marginLeft: "64px",
+    },
+  },
+  spacing: {
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "30px",
+      paddingRight: "30px",
     },
   },
 }));

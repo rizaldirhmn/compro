@@ -18,6 +18,7 @@ export const ServiceSection = ({ t }) => {
   const classes = useStyles();
   const theme = useTheme();
   const match = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <>
@@ -36,70 +37,77 @@ export const ServiceSection = ({ t }) => {
           </Box>
         </Box>
       </Box>
-      <Box marginTop={10} className={classes.position}>
+      <Box marginTop={8}>
         <Grid
           container
-          justify={match ? "flex-start" : "space-between"}
+          justify={matchXS ? "flex-start" : "space-between"}
+          alignItems={matchXS ? "center" : null}
           spacing={4}
         >
           <Grid item xs={12} sm={6} md={3} lg={3}>
-            <Box>
-              <img
-                src={webIllustration}
-                alt="Web Development Illustration"
-                className={classes.illustrations}
-              />
-            </Box>
-            <Box marginTop={2}>
-              <Typography variant="h5" className={classes.text}>
-                {t("ServiceContent.ServiceContentHeader.1")}
-              </Typography>
-            </Box>
-            <Box marginTop={2} className={classes.descriptionText}>
-              <DescriptionText
-                textAlignLeft={true}
-                text={`${t("ServiceContent.ServiceContentDescription.1")}`}
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={3}>
-            <Box>
-              <img
-                src={mobileIllustration}
-                alt="Mobile App Illustration"
-                className={classes.illustrations}
-              />
-            </Box>
-            <Box marginTop={2}>
-              <Typography variant="h5" className={classes.text}>
-                {t("ServiceContent.ServiceContentHeader.2")}
-              </Typography>
-            </Box>
-            <Box marginTop={2} className={classes.descriptionText}>
-              <DescriptionText
-                textAlignLeft={true}
-                text={`${t("ServiceContent.ServiceContentDescription.2")}`}
-              />
+            <Box className={classes.spacing}>
+              <Box>
+                <img
+                  src={webIllustration}
+                  alt="Web Development Illustration"
+                  className={classes.illustrations}
+                />
+              </Box>
+              <Box marginTop={2}>
+                <Typography variant="h5" className={classes.text}>
+                  {t("ServiceContent.ServiceContentHeader.1")}
+                </Typography>
+              </Box>
+              <Box marginTop={2} className={classes.descriptionText}>
+                <DescriptionText
+                  textAlignLeft={true}
+                  text={`${t("ServiceContent.ServiceContentDescription.1")}`}
+                />
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={3}>
-            <Box>
-              <img
-                src={erpIllustration}
-                alt="ERP Illustration"
-                className={classes.illustrations}
-              />
+            <Box className={classes.spacing}>
+              <Box>
+                <img
+                  src={mobileIllustration}
+                  alt="Mobile App Illustration"
+                  className={classes.illustrations}
+                />
+              </Box>
+              <Box marginTop={2}>
+                <Typography variant="h5" className={classes.text}>
+                  {t("ServiceContent.ServiceContentHeader.2")}
+                </Typography>
+              </Box>
+              <Box marginTop={2} className={classes.descriptionText}>
+                <DescriptionText
+                  textAlignLeft={true}
+                  text={`${t("ServiceContent.ServiceContentDescription.2")}`}
+                />
+              </Box>
             </Box>
-            <Box marginTop={2}>
-              <Typography variant="h5" className={classes.text}>
-                {t("ServiceContent.ServiceContentHeader.3")}
-              </Typography>
-            </Box>
-            <Box marginTop={2} className={classes.descriptionText}>
-              <DescriptionText
-                textAlignLeft={true}
-                text={`${t("ServiceContent.ServiceContentDescription.3")}`}
-              />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
+            <Box className={classes.spacing}>
+              <Box>
+                <img
+                  src={erpIllustration}
+                  alt="ERP Illustration"
+                  className={classes.illustrations}
+                />
+              </Box>
+              <Box marginTop={2}>
+                <Typography variant="h5" className={classes.text}>
+                  {t("ServiceContent.ServiceContentHeader.3")}
+                </Typography>
+              </Box>
+              <Box marginTop={2} className={classes.descriptionText}>
+                <DescriptionText
+                  textAlignLeft={true}
+                  text={`${t("ServiceContent.ServiceContentDescription.3")}`}
+                />
+              </Box>
             </Box>
           </Grid>
         </Grid>

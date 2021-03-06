@@ -45,7 +45,7 @@ export const ProjectPage = () => {
             direction="row"
             justify="space-between"
             alignItems="center"
-            spacing={5}
+            spacing={4}
           >
             {data.map((d, idx) => (
               <Grid key={idx} lg={3} md={4} sm={6} xs={12} item>

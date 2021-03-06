@@ -1,5 +1,11 @@
 import React from "react";
-import { Box, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import bookReader from "@iconify-icons/la/book-reader";
 import { Icon } from "@iconify/react";
 import portraitIcon from "@iconify-icons/la/portrait";
@@ -12,31 +18,41 @@ import useStyles from "./introduction-section.style";
 
 export const IntroductionSection = ({ t }) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matchXS = useMediaQuery(theme.breakpoints.down("xs"));
+
+  console.log(matchXS);
 
   return (
     <>
       <Box className={classes.introductions}>
-        <Box flex={1.5}>
-          <Box marginTop={10}>
-            <SubtitleText text={`${t("IntroductionText.1")}`} />
-          </Box>
-          <Box marginTop={3}>
-            <HeaderText text={`${t("IntroductionHeader.1")}`} />
-          </Box>
-          <Box className={classes.descriptionText}>
-            <DescriptionText text={`${t("IntroductionDescription.1")}`} />
-          </Box>
-        </Box>
-        <Box flex={1} marginTop={10}>
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="baseline"
-          >
-            <Grid item sm={6} xs={12}>
-              <Box marginTop={6}>
-                <Box className={classes.box}>
+        <Grid
+          container
+          justify="space-between"
+          alignItems="flex-start"
+          spacing={4}
+        >
+          <Grid item md={6} sm={12} xs={12}>
+            <Box>
+              <SubtitleText text={`${t("IntroductionText.1")}`} />
+            </Box>
+            <Box marginTop={3}>
+              <HeaderText text={`${t("IntroductionHeader.1")}`} />
+            </Box>
+            <Box className={classes.descriptionText}>
+              <DescriptionText text={`${t("IntroductionDescription.1")}`} />
+            </Box>
+          </Grid>
+          <Grid item md={6} sm={12} xs={12}>
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="baseline"
+              spacing={matchXS ? 0 : 6}
+            >
+              <Grid item md={6} sm={6} xs={12}>
+                <Box className={classes.firstBox}>
                   <Box className={classes.circle}>
                     <Icon icon={bookReader} className={classes.icon} />
                   </Box>
@@ -46,10 +62,8 @@ export const IntroductionSection = ({ t }) => {
                     </Typography>
                   </Box>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid item sm={6} xs={12}>
-              <Box marginTop={6}>
+              </Grid>
+              <Grid item md={6} sm={6} xs={12}>
                 <Box className={classes.box}>
                   <Box className={classes.circle}>
                     <Icon icon={portraitIcon} className={classes.icon} />
@@ -60,10 +74,8 @@ export const IntroductionSection = ({ t }) => {
                     </Typography>
                   </Box>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid item sm={6} xs={12}>
-              <Box marginTop={6}>
+              </Grid>
+              <Grid item md={6} sm={6} xs={12}>
                 <Box className={classes.box}>
                   <Box className={classes.circle}>
                     <Icon icon={fileContract} className={classes.icon} />
@@ -74,11 +86,9 @@ export const IntroductionSection = ({ t }) => {
                     </Typography>
                   </Box>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid item sm={6} xs={12}>
-              <Box marginTop={6}>
-                <Box className={classes.box}>
+              </Grid>
+              <Grid item md={6} sm={6} xs={12}>
+                <Box className={classes.lastBox}>
                   <Box className={classes.circle}>
                     <Icon icon={laptopCode} className={classes.icon} />
                   </Box>
@@ -88,10 +98,10 @@ export const IntroductionSection = ({ t }) => {
                     </Typography>
                   </Box>
                 </Box>
-              </Box>
+              </Grid>
             </Grid>
           </Grid>
-        </Box>
+        </Grid>
       </Box>
     </>
   );

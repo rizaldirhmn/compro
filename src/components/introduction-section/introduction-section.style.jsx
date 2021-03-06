@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme) => ({
   introductions: {
     display: "flex",
     justifyContent: "space-between",
+    marginTop: theme.spacing(10),
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -27,21 +28,55 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
   box: {
-    paddingLeft: "10px",
+    paddingLeft: "15px",
     width: "100%",
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("sm")]: {
       width: "65%",
+      paddingLeft: "15px",
+      marginTop: theme.spacing(0),
     },
     [theme.breakpoints.down("xs")]: {
       marginLeft: theme.spacing(8),
+      marginBottom: theme.spacing(8),
+    },
+  },
+  firstBox: {
+    paddingLeft: "15px",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      width: "65%",
+      paddingLeft: "15px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: theme.spacing(8),
+      marginLeft: theme.spacing(8),
+      marginBottom: theme.spacing(8),
+    },
+  },
+  lastBox: {
+    paddingLeft: "15px",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      width: "65%",
+      paddingLeft: "15px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(8),
+      marginBottom: theme.spacing(0),
     },
   },
   descriptionText: {
     marginTop: "20px",
-    width: "600px",
+    width: "fit-content",
+    paddingRight: "80px",
     [theme.breakpoints.down("sm")]: {
+      paddingRight: "0",
       width: "fit-content",
     },
   },
