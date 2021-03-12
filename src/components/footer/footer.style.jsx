@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontFamily: "Montserrat",
     fontSize: 14,
-    maxWidth: "300px",
+    maxWidth: "260px",
   },
   footerSpace: {
     position: "relative",

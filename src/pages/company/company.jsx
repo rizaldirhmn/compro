@@ -109,7 +109,6 @@ export const CompanyPage = React.memo(() => {
               style={{
                 textDecoration: "underline",
                 marginLeft: 7,
-                cursor: "pointer",
               }}
             >
               <Trans count={1}>{t("ResumeTextEmail.1")}</Trans>

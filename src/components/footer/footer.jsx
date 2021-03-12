@@ -7,7 +7,7 @@ import instagramFilled from "@iconify-icons/ant-design/instagram-filled";
 import facebookFill from "@iconify-icons/akar-icons/facebook-fill";
 import linkedinFill from "@iconify-icons/akar-icons/linkedin-fill";
 import mapMarkerLine from "@iconify-icons/clarity/map-marker-line";
-import phoneIcon from "@iconify-icons/akar-icons/phone";
+import gmailIcon from "@iconify-icons/cib/gmail";
 import { Icon } from "@iconify/react";
 import { useTranslation, Trans } from "react-i18next";
 
@@ -68,9 +68,8 @@ export const FooterComponent = () => {
                     className={classes.footerText}
                     style={{ marginLeft: "40px" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Nullam erat sed porta nibh Sed cursus gravida mattis posuere
-                    sapien turpis ut
+                    EOA Business Center, Peto Junction JL Puri Beta Town Center
+                    LT 2 No. 29, Larangan, Ciledug, Tangerang 15154
                   </Typography>
                 </Box>
               </Box>
@@ -83,16 +82,14 @@ export const FooterComponent = () => {
               </Box>
               <Box display="flex" marginTop={4}>
                 <Box>
-                  <Icon className={classes.footerIcon} icon={phoneIcon} />
+                  <Icon className={classes.footerIcon} icon={gmailIcon} />
                 </Box>
                 <Box>
                   <Typography
                     className={classes.footerText}
                     style={{ marginLeft: "40px" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Nullam erat sed porta nibh Sed cursus gravida mattis posuere
-                    sapien turpis ut
+                    it.helpdesk@eoagroup.id
                   </Typography>
                 </Box>
               </Box>
