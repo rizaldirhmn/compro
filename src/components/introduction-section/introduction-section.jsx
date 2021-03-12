@@ -21,8 +21,6 @@ export const IntroductionSection = ({ t }) => {
   const theme = useTheme();
   const matchXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  console.log(matchXS);
-
   return (
     <>
       <Box className={classes.introductions}>
