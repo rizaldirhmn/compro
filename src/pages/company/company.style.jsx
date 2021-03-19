@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   sendText: {
     fontWeight: "bold",
     fontFamily: "Montserrat",
+    textAlign: "center",
   },
   background: {
     display: "flex",

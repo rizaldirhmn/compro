@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(5),
-      height: "350px",
+      height: "100%",
     },
   },
   containerPict: {
