@@ -141,8 +141,11 @@
     "ProjectDescription": {
         "1": "There have been many projects we have built according to the necessary spesifications and needs. With the development using sophisticated technologies"
     },
+    "ProjectDetailText": {
+        "1": "See Project"
+    },
     "FooterDescriptionText": {
-        "1": "The software house company, a software development company company that specializes in software development apps."
+        "1": "The software house company, a software development company that specializes in software development apps."
     },
     "AddressText": {
         "1": "Address"

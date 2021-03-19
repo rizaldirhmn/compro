@@ -6,7 +6,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import { Box, ListItemText, Typography } from "@material-ui/core";
-import { NavbarButton } from "../navbar-button/navbar-button";
+import { NavbarButton } from "../mui-button/navbar-button/navbar-button";
 import { useHistory, useLocation } from "react-router-dom";
 import {
   useStyles,

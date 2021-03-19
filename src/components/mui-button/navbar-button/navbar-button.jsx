@@ -1,9 +1,8 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import useStyles from "./navbar-button.style";
-import { Icon } from "@iconify/react";
-import USIcon from "../../assets/icons/united-states-of-america.svg";
-import indonesianIcon from "../../assets/icons/indonesia.svg";
+import USIcon from "../../../assets/icons/united-states-of-america.svg";
+import indonesianIcon from "../../../assets/icons/indonesia.svg";
 
 export const NavbarButton = ({ condition, ...props }) => {
   const classes = useStyles();

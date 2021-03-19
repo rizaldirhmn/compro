@@ -98,7 +98,7 @@ export const FooterComponent = () => {
         </Container>
         <Box p={3} className={classes.footerCopyright}>
           <Typography className={classes.footerTextCopyright}>
-            Copyright by EOA Technology International 2021 All Right Reserved
+            © EOA Tech Team. 2020 Crafted with love for "Peradaban EOA"
           </Typography>
         </Box>
       </Box>
