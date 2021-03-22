@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  reverse-proxy:
+    external: true
+    name: reverse-proxy
+
+services:
+  app:
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.${SERVICE_NAME}-dev.rule=Host(`${URL_DEV}`)"
+        - "traefik.http.routers.${SERVICE_NAME}-dev.tls.certresolver=le"
+        - "traefik.http.services.${SERVICE_NAME}-dev.loadbalancer.server.port=8080"
+    image: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+    networks:
+        - reverse-proxy

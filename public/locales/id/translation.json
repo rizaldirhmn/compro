@@ -1,0 +1,156 @@
+{
+    "NavbarItems": {
+        "1": "Utama",
+        "2": "Perusahaan",
+        "3": "Proyek",
+        "4": "Bahasa"
+    },
+    "Languages": {
+        "1": "Inggris",
+        "2": "Bahasa"
+    },
+    "HeaderJumbotron": {
+        "1": "Kami Membuat Kode Dengan Kualitas Tinggi"
+    },
+    "JumbotronDescription": {
+        "1": "EOA Tech adalah perusahaan pengembangan perangkat lunak yang berspesialisasi dalam pengembangan perangkat lunak atau aplikasi. EOA Tech telah banyak terlibat membantu klien memecahkan masalah mereka. Seiring pertumbuhannya, ia ingin mengetahui lebih banyak dan mendatangkan klien baru"
+    },
+    "IntroductionText": {
+        "1": "Pengantar"
+    },
+    "IntroductionHeader": {
+        "1": "Bagaimana kami bekerja"
+    },
+    "IntroductionDescription": {
+        "1": "Kami selalu memberikan layanan dan solusi terbaik untuk kebutuhan klien kami. Kami memberi Anda pengembangan perangkat lunak berkualitas baik melalui pemahaman yang lebih baik tentang bisnis dan masa depan Anda"
+    },
+    "IntroductionContent": {
+        "1": "Temukan Tujuan Proyek",
+        "2": "Dapatkan Proposal Dari Kami",
+        "3": "Mengambil Kontrak",
+        "4": "Implementasi Proyek"
+    },
+    "ServiceText": {
+        "1": "Layanan"
+    },
+    "ServiceHeader": {
+        "1": "Layanan Kami"
+    },
+    "ServiceDescription": {
+        "1": "Kami sangat sadar dan cermat dalam memproduksi perangkat lunak berkualitas tinggi untuk klien kami, tim fleksibel dengan pengembang berpengalaman tinggi, dan menghasilkan perangkat lunak dengan investasi minimal"
+    },
+    "ServiceContent": {
+        "ServiceContentHeader": {
+            "1": "Pengembang Website",
+            "2": "Aplikasi Seluler",
+            "3": "ERP"
+        },
+        "ServiceContentDescription": {
+            "1": "Kami Mengembangkan satu halaman statis sederhana dari teks biasa ke aplikasi Internet kompleks berbasis Situs Web, bisnis, dan Layanan jaringan sosial",
+            "2": "Kami Mengembangkan Aplikasi Seluler untuk perangkat seluler, seperti asisten digital pribadi, asisten digital perusahaan, atau telepon seluler",
+            "3": "Kami Mengembangkan solusi ERP berdasarkan kebutuhan bisnis Anda dan untuk membantu Anda mengembangkan bisnis secara eksponensial"
+        }
+    },
+    "SloganText": {
+        "1": "Kami berbagi ide, pengetahuan, dan pengalaman kami. Jadi, mari kita lihat bagaimana Anda dapat meningkatkan bisnis Anda dengan EOA Tech sekarang"
+    },
+    "PlatformText": {
+        "1": "Develop"
+    },
+    "PlatformHeader": {
+        "1": "Platform"
+    },
+    "PlatformDescription": {
+        "1": "Kami tahu platform apa yang dibutuhkan klien kami, dengan teknologi paling canggih dan andal. Sehingga klien dapat mempercayai kami sepenuhnya sesuai dengan spesifikasi yang telah diberikan"
+    },
+    "ClientText": {
+        "1": "Klien"
+    },
+    "ClientHeader": {
+        "1": "Klien Kami"
+    },
+    "DevelopmentText": {
+        "1": "Pengembangan"
+    },
+    "DevelopmentHeader": {
+        "1": "Teknologi Yang Kami Gunakan"
+    },
+    "AboutUsText": {
+        "1": "Tentang Kami"
+    },
+    "AboutUsHeader": {
+        "1": "EOA Tech"
+    },
+    "AboutUsDescription": {
+        "1": "Bagaimana dan seperti apa perusahaan sotware house ini dibentuk, Visi dan Misi, Sejarah singkat dan siapa saja yang berada dibalik perusahaan software house tersebut"
+    },
+    "OverviewHeader": {
+        "1": "Gambaran"
+    },
+    "OverviewDescription": {
+        "1": "Eoa tech international adalah perusahaan pengembang perangkat lunak, perusahaan yang berspesialisasi dalam pengembangan perangkat lunak atau aplikasi. Eoa tech telah banyak terlibat membantu klien menyelesaikan masalah mereka. Seiring pertumbuhannya, ia ingin dikenal lebih dan lebih banyak lagi, dan itu membawa klien baru."
+    },
+    "HistoryHeader": {
+        "1": "Sejarah"
+    },
+    "HistoryDescription": {
+        "1": "Eoa tech international adalah perusahaan pengembang perangkat lunak, perusahaan yang berspesialisasi dalam pengembangan perangkat lunak atau aplikasi. Eoa tech telah banyak terlibat membantu klien menyelesaikan masalah mereka. Seiring pertumbuhannya, ia ingin dikenal lebih dan lebih banyak lagi, dan itu membawa klien baru."
+    },
+    "VissionHeader": {
+        "1": "Visi kami"
+    },
+    "VissionDescription": {
+        "1": "Eoa tech international adalah perusahaan pengembang perangkat lunak, perusahaan yang berspesialisasi dalam pengembangan perangkat lunak atau aplikasi. Eoa tech telah banyak terlibat membantu klien menyelesaikan masalah mereka. Seiring pertumbuhannya, ia ingin dikenal lebih dan lebih banyak lagi, dan itu membawa klien baru."
+    },
+    "MissionHeader": {
+        "1": "Misi kami"
+    },
+    "MissionDescription": {
+        "1": "Eoa tech international adalah perusahaan pengembang perangkat lunak, perusahaan yang berspesialisasi dalam pengembangan perangkat lunak atau aplikasi. Eoa tech telah banyak terlibat membantu klien menyelesaikan masalah mereka. Seiring pertumbuhannya, ia ingin dikenal lebih dan lebih banyak lagi, dan itu membawa klien baru."
+    },
+    "TeamText": {
+        "1": "Tim EOA"
+    },
+    "TeamHeader": {
+        "1": "Tim Kami"
+    },
+    "TeamDescription": {
+        "1": "Bagaimana dan seperti apa perusahaan sotware house ini dibentuk, Mission Vission, sejarah singkat dan siapa saja yang berada dibalik perusahaan software house tersebut"
+    },
+    "CareerText": {
+        "1": "Posisi"
+    },
+    "CareerHeader": {
+        "1": "Karir"
+    },
+    "CareerDescription": {
+        "1": "Kami terus mencari semua level pengembang perangkat lunak dari pengembang junior hingga senior dalam semua jenis keterampilan"
+    },
+    "ResumeText": {
+        "1": "Kirim resume anda ke"
+    },
+    "ResumeTextEmail": {
+        "1": "it.helpdesk@eoagroup.id"
+    },
+    "ProjectText": {
+        "1": "Proyek"
+    },
+    "ProjectHeader": {
+        "1": "Proyek Kami"
+    },
+    "ProjectDescription": {
+        "1": "Sudah banyak proyek yang kami bangun sesuai dengan spesifikasi dan kebutuhan yang diperlukan. Dengan perkembangan menggunakan teknologi canggih"
+    },
+    "FooterDescriptionText": {
+        "1": "Perusahaan pengembang perangkat lunak yang berspesialisasi dalam aplikasi pengembangan perangkat lunak."
+    },
+    "ProjectDetailText": {
+        "1": "Lihat Proyek"
+    },
+    "AddressText": {
+        "1": "Alamat"
+    },
+    "ContactText": {
+        "1": "Kontak"
+    }
+}

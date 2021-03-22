@@ -1,0 +1,156 @@
+{
+    "NavbarItems": {
+        "1": "Home",
+        "2": "Company",
+        "3": "Project",
+        "4": "Language"
+    },
+    "Languages": {
+        "1": "English",
+        "2": "Bahasa"
+    },
+    "HeaderJumbotron": {
+        "1": "We Code With High Quality"
+    },
+    "JumbotronDescription": {
+        "1": "EOA Tech is a software development company that specializes in software development or apps. EOA Tech has been a lot involved helping clients solve their problems. As it grows, it wants to be know more and it brings in new clients"
+    },
+    "IntroductionText": {
+        "1": "Introduction"
+    },
+    "IntroductionHeader": {
+        "1": "How We Work"
+    },
+    "IntroductionDescription": {
+        "1": "We always provide the best services and solutions to our clents requirements. We give you good quality software development through a better understanding of your bussiness and future"
+    },
+    "IntroductionContent": {
+        "1": "Discover Project Goal",
+        "2": "Get a Proposal from Us",
+        "3": "Taken the Contract",
+        "4": "Project Implementation"
+    },
+    "ServiceText": {
+        "1": "Service"
+    },
+    "ServiceHeader": {
+        "1": "Our Service"
+    },
+    "ServiceDescription": {
+        "1": "We are very aware and meticulous in producing high-quality software for our clients, flexible team with high experiences developers and produce software with minimal invesments"
+    },
+    "ServiceContent": {
+        "ServiceContentHeader": {
+            "1": "Web Development",
+            "2": "Mobile App",
+            "3": "ERP"
+        },
+        "ServiceContentDescription": {
+            "1": "We Developing a simple single static page of plain text to complex Web Site - based Internet applications, businesses, and social network Services",
+            "2": "We Developing a Mobile app for mobile device, such as personal digital assistants, enterprise digital assistants or mobile phones",
+            "3": "We Developing a ERP solution based on your business requirements and to help you grow your business exponentially"
+        }
+    },
+    "SloganText": {
+        "1": "We share our ideas, knowledge and experiences. So let’s see how you can improve your business with EOA Tech now"
+    },
+    "PlatformText": {
+        "1": "Develop"
+    },
+    "PlatformHeader": {
+        "1": "Platforms"
+    },
+    "PlatformDescription": {
+        "1": "We know what platforms our clients need, with the most advanced and reliable technology. So clients can trust us entirely according to the spesifications that have been given"
+    },
+    "ClientText": {
+        "1": "Client"
+    },
+    "ClientHeader": {
+        "1": "Our Clients"
+    },
+    "DevelopmentText": {
+        "1": "Development"
+    },
+    "DevelopmentHeader": {
+        "1": "Language & Framework"
+    },
+    "AboutUsText": {
+        "1": "About us"
+    },
+    "AboutUsHeader": {
+        "1": "EOA Tech"
+    },
+    "AboutUsDescription": {
+        "1": "How and what kind of sotware house company was formed, Mission Vission, a brief history and anyone behind the software house company"
+    },
+    "OverviewHeader": {
+        "1": "Overview"
+    },
+    "OverviewDescription": {
+        "1": "Eoa tech international is a software house, a company that specializes in the development of software or apps. Eoa tech has been a lot involved helping clients solve their problems. As it grows, it wants to be known more and more, and it brings in new clients. Hence eoa tech international needs a website to introduce, promote, inform clients of eoa tech international, prospective clients, and show previously generated applications."
+    },
+    "HistoryHeader": {
+        "1": "History"
+    },
+    "HistoryDescription": {
+        "1": "Eoa tech international is a software house, a company that specializes in the development of software or apps. Eoa tech has been a lot involved helping clients solve their problems. As it grows, it wants to be known more and more, and it brings in new clients. Hence eoa tech international needs a website to introduce, promote, inform clients of eoa tech international, prospective clients, and show previously generated applications."
+    },
+    "VissionHeader": {
+        "1": "Our Vission"
+    },
+    "VissionDescription": {
+        "1": "Eoa tech international is a software house, a company that specializes in the development of software or apps. Eoa tech has been a lot involved helping clients solve their problems. As it grows, it wants to be known more and more, and it brings in new clients. Hence eoa tech international needs a website to introduce, promote, inform clients of eoa tech international, prospective clients, and show previously generated applications."
+    },
+    "MissionHeader": {
+        "1": "Our Mission"
+    },
+    "MissionDescription": {
+        "1": "Eoa tech international is a software house, a company that specializes in the development of software or apps. Eoa tech has been a lot involved helping clients solve their problems. As it grows, it wants to be known more and more, and it brings in new clients. Hence eoa tech international needs a website to introduce, promote, inform clients of eoa tech international, prospective clients, and show previously generated applications."
+    },
+    "TeamText": {
+        "1": "EOA Team"
+    },
+    "TeamHeader": {
+        "1": "Our Teams"
+    },
+    "TeamDescription": {
+        "1": "How and what kind of sotware house company was formed, Mission Vission, a brief history and anyone behind the software house company"
+    },
+    "CareerText": {
+        "1": "Position"
+    },
+    "CareerHeader": {
+        "1": "Careers"
+    },
+    "CareerDescription": {
+        "1": "We keep looking for all levels of software developers from junior to senior developers in all range of skills"
+    },
+    "ResumeText": {
+        "1": "Please send your resume to"
+    },
+    "ResumeTextEmail": {
+        "1": "it.helpdesk@eoagroup.id"
+    },
+    "ProjectText": {
+        "1": "Project"
+    },
+    "ProjectHeader": {
+        "1": "Our Projects"
+    },
+    "ProjectDescription": {
+        "1": "There have been many projects we have built according to the necessary spesifications and needs. With the development using sophisticated technologies"
+    },
+    "ProjectDetailText": {
+        "1": "See Project"
+    },
+    "FooterDescriptionText": {
+        "1": "The software house company, a software development company that specializes in software development apps."
+    },
+    "AddressText": {
+        "1": "Address"
+    },
+    "ContactText": {
+        "1": "Contact"
+    }
+}
